@@ -7,6 +7,10 @@
   color: #b2bec3;
 }
 
+*:-ms-input-placeholder {
+  color: #b2bec3;
+}
+
 *::placeholder {
   color: #b2bec3;
 }
@@ -641,7 +645,7 @@ ol {
   background-repeat: no-repeat;
 }
 
-.loginPage {
+.login-page {
   display: flex;
   justify-content: space-between;
   height: 100vh;
@@ -676,4 +680,4 @@ ol {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,26 @@
+$smallBP: 480px;
+$mediumBP: 720px;
+$largeBP: 960px;
+$wideBP: 1200px;
+
+@mixin breakpoint($point) {
+  @if $point == small {
+    @media (min-width: $smallBP) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media (min-width: $mediumBP) {
+      @content;
+    }
+  } @else if $point == large {
+    @media (min-width: $largeBP) {
+      @content;
+    }
+  } @else if $point == wide {
+    @media (min-width: $wideBP) {
+      @content;
+    }
+  } @else {
+    @warn 'Not a valid breakpoint name.';
+  }
+}
