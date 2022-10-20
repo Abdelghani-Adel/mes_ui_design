@@ -1,16 +1,6 @@
-@import "variable";
+@import "abstracts";
+@import "base";
+@import "module";
+@import "pages";
 
-@import "base/default";
-
-@import "layout/loginPage";
-@import "module/platform";
-@import "module/login-form";
-@import "module/logo";
-@import "module/form-control";
-
-@import "utilities/typography";
-@import "utilities/colors";
-@import "utilities/spacing";
 @import "utilities/other";
-
-@import "state/default";
