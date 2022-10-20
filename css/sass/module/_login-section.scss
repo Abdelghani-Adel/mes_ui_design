@@ -1,0 +1,14 @@
+.login-section {
+  width: 25%;
+  position: relative;
+
+  background-color: #fff;
+}
+
+.login-form {
+  position: absolute;
+  width: 60%;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+}

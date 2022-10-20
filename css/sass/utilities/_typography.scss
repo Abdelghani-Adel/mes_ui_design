@@ -1,0 +1,45 @@
+// font-size
+
+// font-family
+.fm-roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.fm-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+// font-weight
+.fw-light {
+  font-weight: 300;
+}
+
+.fw-regular {
+  font-weight: 400;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+.fw-semi {
+  font-weight: 600;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+// letter-spacing
+@for $i from 1 through 5 {
+  .ls-#{$i} {
+    letter-spacing: $i + "px";
+  }
+}
+
+// word-spacing
+@for $i from 1 through 5 {
+  .ws-#{$i} {
+    word-spacing: $i + "px";
+  }
+}

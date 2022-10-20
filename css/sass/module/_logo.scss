@@ -1,0 +1,15 @@
+.logo {
+  color: #2d62ed;
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+  font-size: 2rem;
+
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
