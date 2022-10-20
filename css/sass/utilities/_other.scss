@@ -9,6 +9,12 @@
 .d-flex {
   display: flex;
 }
+.flex-column {
+  flex-direction: column;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
 
 .p-relative {
   position: relative;

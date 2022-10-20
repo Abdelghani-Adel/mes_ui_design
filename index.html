@@ -13,6 +13,7 @@
       rel="stylesheet"
     />
 
+    <!-- Font-Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -22,41 +23,42 @@
     <title>MES Factory</title>
   </head>
   <body>
-    <div class="loginPage">
-      <div class="platform">
+    <div class="d-flex h-100vh bg-primary">
+      <!-- Platform Picture -->
+      <div class="p-relative w-75">
         <div class="platform-background">
-          <div>
-            <h2 class="fm-montserrat fw-bold">One Platform For Managing all</h2>
-            <h1 class="fm-montserrat fw-medium">MANUFACTURING ASPECTS</h1>
-          </div>
+          <h2 class="fm-montserrat fw-bold mb-0">
+            One Platform For Managing all
+          </h2>
+          <h1 class="fm-montserrat fw-medium mt-1">MANUFACTURING ASPECTS</h1>
         </div>
       </div>
-      <div class="login-section">
+
+      <!-- Login Section -->
+      <div class="w-25 bg-white p-relative">
+        <!-- Logo -->
         <div class="logo">
           <img src="assets/factoryIcon.svg" alt="" />
           <h3>MES</h3>
         </div>
 
+        <!-- Login form -->
         <form class="login-form">
-          <div class="p-relative mb-3">
-            <input
-              type="text"
-              class="form-input border-focus-primary rounded-2"
-              placeholder="E-Mail"
-            />
+          <!-- Username - Email -->
+          <div class="form-control mb-2">
+            <input type="text" class="form-input" placeholder="E-Mail" />
             <i class="fa-regular fa-envelope form-icon"></i>
           </div>
 
-          <div class="p-relative mb-3">
-            <input
-              type="password"
-              class="form-input rounded-2"
-              placeholder="Password"
-            />
+          <!-- Password -->
+          <div class="form-control mb-4">
+            <input type="password" class="form-input" placeholder="Password" />
             <i class="fa-solid fa-lock form-icon"></i>
           </div>
+
+          <!-- Login button -->
           <div class="form-control">
-            <button class="form-btn">Log in</button>
+            <button class="form-btn fm-montserrat fw-bold">Login</button>
           </div>
         </form>
       </div>

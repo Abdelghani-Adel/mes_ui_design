@@ -27,3 +27,52 @@
 @include generate(pr, padding-right);
 @include generate(pb, padding-bottom);
 @include generate(pl, padding-left);
+
+.h-100 {
+  height: 100%;
+}
+.h-75 {
+  height: 75%;
+}
+.h-50 {
+  height: 50%;
+}
+.h-25 {
+  height: 25%;
+}
+.h-100vh {
+  height: 100vh;
+}
+.h-75vh {
+  height: 75vh;
+}
+.h-50vh {
+  height: 50vh;
+}
+.h-25vh {
+  height: 25vh;
+}
+.w-100 {
+  width: 100%;
+}
+.w-75 {
+  width: 75%;
+}
+.w-50 {
+  width: 50%;
+}
+.w-25 {
+  width: 25%;
+}
+.w-100vh {
+  width: 100vh;
+}
+.w-75vh {
+  width: 75vh;
+}
+.w-50vh {
+  width: 50vh;
+}
+.w-25vh {
+  width: 25vh;
+}
