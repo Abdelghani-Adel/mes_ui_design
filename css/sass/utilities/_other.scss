@@ -29,3 +29,11 @@
 .box-shadow {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
+
+.dot {
+  height: 0.9em;
+  width: 0.9em;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.5em;
+}

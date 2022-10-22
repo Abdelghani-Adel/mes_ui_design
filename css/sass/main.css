@@ -52,6 +52,10 @@ ol {
   list-style: none;
 }
 
+hr {
+  margin: 0.5em 0;
+}
+
 .fs-small {
   font-size: 0.7rem;
 }
@@ -176,6 +180,74 @@ ol {
   color: #00d1de;
 }
 
+.txt-submarine {
+  color: #b2bec3;
+}
+
+.txt-bright-turquoise {
+  color: #00ccf2;
+}
+
+.txt-egg-blue {
+  color: #00d1de;
+}
+
+.txt-shamrock {
+  color: #26d395;
+}
+
+.txt-mantis {
+  color: #6dcf67;
+}
+
+.txt-atlantis {
+  color: #a0c73a;
+}
+
+.txt-crusta {
+  color: #fb7644;
+}
+
+.txt-corn {
+  color: #d0ba05;
+}
+
+.txt-web-orange {
+  color: #ffa600;
+}
+
+.txt-astronaut {
+  color: #2e4a79;
+}
+
+.txt-astronaut-blue {
+  color: #003f5c;
+}
+
+.txt-butterfly-bush {
+  color: #634f8d;
+}
+
+.txt-tapestry {
+  color: #994f90;
+}
+
+.txt-mulberry {
+  color: #ca4e82;
+}
+
+.txt-mandy {
+  color: #ec5967;
+}
+
+.txt-ebony-clay {
+  color: #272d3b;
+}
+
+.txt-royal-blue {
+  color: #2d62ed;
+}
+
 .border-primary {
   border-color: #2d62ed;
 }
@@ -226,6 +298,74 @@ ol {
 
 .border-lightgreen {
   border-color: #00d1de;
+}
+
+.border-submarine {
+  border-color: #b2bec3;
+}
+
+.border-bright-turquoise {
+  border-color: #00ccf2;
+}
+
+.border-egg-blue {
+  border-color: #00d1de;
+}
+
+.border-shamrock {
+  border-color: #26d395;
+}
+
+.border-mantis {
+  border-color: #6dcf67;
+}
+
+.border-atlantis {
+  border-color: #a0c73a;
+}
+
+.border-crusta {
+  border-color: #fb7644;
+}
+
+.border-corn {
+  border-color: #d0ba05;
+}
+
+.border-web-orange {
+  border-color: #ffa600;
+}
+
+.border-astronaut {
+  border-color: #2e4a79;
+}
+
+.border-astronaut-blue {
+  border-color: #003f5c;
+}
+
+.border-butterfly-bush {
+  border-color: #634f8d;
+}
+
+.border-tapestry {
+  border-color: #994f90;
+}
+
+.border-mulberry {
+  border-color: #ca4e82;
+}
+
+.border-mandy {
+  border-color: #ec5967;
+}
+
+.border-ebony-clay {
+  border-color: #272d3b;
+}
+
+.border-royal-blue {
+  border-color: #2d62ed;
 }
 
 .border-focus-primary:focus-visible {
@@ -280,6 +420,74 @@ ol {
   border-color: #00d1de;
 }
 
+.border-focus-submarine:focus-visible {
+  border-color: #b2bec3;
+}
+
+.border-focus-bright-turquoise:focus-visible {
+  border-color: #00ccf2;
+}
+
+.border-focus-egg-blue:focus-visible {
+  border-color: #00d1de;
+}
+
+.border-focus-shamrock:focus-visible {
+  border-color: #26d395;
+}
+
+.border-focus-mantis:focus-visible {
+  border-color: #6dcf67;
+}
+
+.border-focus-atlantis:focus-visible {
+  border-color: #a0c73a;
+}
+
+.border-focus-crusta:focus-visible {
+  border-color: #fb7644;
+}
+
+.border-focus-corn:focus-visible {
+  border-color: #d0ba05;
+}
+
+.border-focus-web-orange:focus-visible {
+  border-color: #ffa600;
+}
+
+.border-focus-astronaut:focus-visible {
+  border-color: #2e4a79;
+}
+
+.border-focus-astronaut-blue:focus-visible {
+  border-color: #003f5c;
+}
+
+.border-focus-butterfly-bush:focus-visible {
+  border-color: #634f8d;
+}
+
+.border-focus-tapestry:focus-visible {
+  border-color: #994f90;
+}
+
+.border-focus-mulberry:focus-visible {
+  border-color: #ca4e82;
+}
+
+.border-focus-mandy:focus-visible {
+  border-color: #ec5967;
+}
+
+.border-focus-ebony-clay:focus-visible {
+  border-color: #272d3b;
+}
+
+.border-focus-royal-blue:focus-visible {
+  border-color: #2d62ed;
+}
+
 .bg-primary {
   background-color: #2d62ed;
 }
@@ -330,6 +538,74 @@ ol {
 
 .bg-lightgreen {
   background-color: #00d1de;
+}
+
+.bg-submarine {
+  background-color: #b2bec3;
+}
+
+.bg-bright-turquoise {
+  background-color: #00ccf2;
+}
+
+.bg-egg-blue {
+  background-color: #00d1de;
+}
+
+.bg-shamrock {
+  background-color: #26d395;
+}
+
+.bg-mantis {
+  background-color: #6dcf67;
+}
+
+.bg-atlantis {
+  background-color: #a0c73a;
+}
+
+.bg-crusta {
+  background-color: #fb7644;
+}
+
+.bg-corn {
+  background-color: #d0ba05;
+}
+
+.bg-web-orange {
+  background-color: #ffa600;
+}
+
+.bg-astronaut {
+  background-color: #2e4a79;
+}
+
+.bg-astronaut-blue {
+  background-color: #003f5c;
+}
+
+.bg-butterfly-bush {
+  background-color: #634f8d;
+}
+
+.bg-tapestry {
+  background-color: #994f90;
+}
+
+.bg-mulberry {
+  background-color: #ca4e82;
+}
+
+.bg-mandy {
+  background-color: #ec5967;
+}
+
+.bg-ebony-clay {
+  background-color: #272d3b;
+}
+
+.bg-royal-blue {
+  background-color: #2d62ed;
 }
 
 .m-0 {
@@ -979,4 +1255,12 @@ ol {
 
 .box-shadow {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.dot {
+  height: 0.9em;
+  width: 0.9em;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.5em;
 }/*# sourceMappingURL=main.css.map */
