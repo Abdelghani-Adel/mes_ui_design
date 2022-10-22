@@ -27,7 +27,7 @@
   <body>
     <div class="container-fluid">
       <div class="row">
-        <!-- SIDE BAR -->
+        <!-- START SIDE BAR -->
         <div class="col-2 pl-0 fs-5 bg-primary txt-white-3">
           <div class="d-flex flex-column min-vh-100">
             <!-- logo -->
@@ -40,7 +40,7 @@
             <!-- Nav-Menu -->
             <ul class="nav nav-pills flex-column" id="menu">
               <li class="nav-item">
-                <a href="#submenu1" class="nav-link">
+                <a href="./dashboard.html" class="nav-link active">
                   <i class="fa-solid fa-gauge"></i>
                   <span>Dashboard</span>
                 </a>
@@ -121,6 +121,91 @@
               </li>
             </ul>
           </div>
+        </div>
+        <!-- End SIDE Bar -->
+
+        <!-- START CONTENT AREA -->
+        <div class="col-10 bg-white-3">
+          <!-- Start Top Header -->
+          <div class="row bg-white py-1 mb-5 box-shadow">
+            <div class="col-12 d-flex">
+              <!--  -->
+              <div class="d-flex align-items-center">
+                <button class="btn bg-lightblue txt-blue dropdown-toggle">
+                  <i class="fa-solid fa-building mx-2"></i> Factory Name
+                </button>
+
+                <button class="btn bg-lightblue mx-3">
+                  <img src="../assets/function.png" alt="" />
+                </button>
+
+                <div>
+                  <img src="../assets/load.png" alt="" />
+                </div>
+              </div>
+
+              <!--  -->
+              <div class="d-flex align-items-center ms-auto">
+                <button class="btn bg-lightblue txt-blue">Today</button>
+                <button class="btn txt-gray">Yesterday</button>
+                <button class="btn txt-gray">Lastweek</button>
+                <button class="btn txt-gray fs-5">
+                  <i class="fa-regular fa-calendar"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- End Top Header -->
+
+          <!-- START CONTENT -->
+          <div class="px-5">
+            <!-- Title -->
+            <h5 class="my-4">Dashboard</h5>
+
+            <div class="col-10">
+              <div class="row">
+                <!-- Total Production Card -->
+                <div class="col-3">
+                  <div class="box-shadow rounded-2 bg-white p-3">
+                    <!--  -->
+                    <div class="d-flex">
+                      <img src="../assets/product.png" class="mr-3" /> Total
+                      Production
+                    </div>
+                    <!--  -->
+                    <hr />
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <p class="mb-0 fs-5 fm-montserrat fw-medium">
+                          5,000 km
+                        </p>
+                        <p class="txt-blue fs-small">Actual Production</p>
+                      </div>
+                      <div>
+                        <p class="mb-0 fs-5 fm-montserrat fw-medium">
+                          7,000 km
+                        </p>
+                        <p class="txt-gray fs-small">Planned Production</p>
+                      </div>
+                    </div>
+                    <!--  -->
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <div class="progress w-75 me-2" style="height: 10px">
+                        <div class="progress-bar w-75"></div>
+                      </div>
+                      <p class="fs-4 mb-0">75%</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card -->
+              </div>
+            </div>
+            <div class="col-2 h-50 bg-white"></div>
+          </div>
+          <!-- END CONTENT -->
         </div>
       </div>
     </div>
