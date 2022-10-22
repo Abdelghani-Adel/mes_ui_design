@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Grid System -->
+    <link rel="stylesheet" href="../css/vendors/bootstrap.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../css/sass/main.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- SIDE BAR -->
+        <div class="col-2 pl-0 fs-5 bg-primary txt-white-3">
+          <div class="d-flex flex-column min-vh-100">
+            <!-- logo -->
+            <a
+              href="../index.html"
+              class="d-flex mx-auto mt-4 mb-5 fs-2 text-white"
+              ><img src="../assets/navIcon.svg" class="me-3" /> MES</a
+            >
+
+            <!-- Nav-Menu -->
+            <ul class="nav nav-pills flex-column" id="menu">
+              <li class="nav-item">
+                <a href="#submenu1" class="nav-link">
+                  <i class="fa-solid fa-gauge"></i>
+                  <span>Dashboard</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#submenu2" data-bs-toggle="collapse" class="nav-link">
+                  <i class="fa-solid fa-hotel"></i>
+                  <span>Resources</span></a
+                >
+                <ul
+                  class="collapse nav flex-column ms-1 pl-5"
+                  id="submenu2"
+                  data-bs-parent="#menu"
+                >
+                  <li class="w-100">
+                    <a href="#" class="nav-link px-0 d-flex">
+                      <span class="d-none d-sm-inline">Material</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link px-0">
+                      <span class="d-none d-sm-inline">Energy</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link px-0">
+                      <span class="d-none d-sm-inline">Man Power</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a href="#submenu1" class="nav-link">
+                  <i class="fa-solid fa-industry"></i>
+                  <span>Manufacturing</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#submenu1" class="nav-link">
+                  <i class="fa-solid fa-screwdriver-wrench"></i>
+                  <span>Machines</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#submenu1" class="nav-link">
+                  <i class="fa-solid fa-repeat"></i>
+                  <span>Planning</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#submenu1" class="nav-link">
+                  <i class="fa-solid fa-triangle-exclamation"></i>
+                  <span>Issues</span>
+                </a>
+              </li>
+            </ul>
+
+            <ul
+              class="nav nav-pills flex-columnalign-items-center align-items-sm-start mt-auto"
+            >
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa-solid fa-sliders"></i>
+                  <span>Settings</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link">
+                  <i class="fa-solid fa-right-from-bracket"></i>
+                  <span>Logout</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/vendors/bootstrap.js"></script>
+  </body>
+</html>
