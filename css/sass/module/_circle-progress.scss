@@ -1,3 +1,5 @@
+$transition: 2s;
+
 .circle-progress {
   width: 5rem;
   height: 5rem;
@@ -76,21 +78,21 @@
 
 // Customize Progress right
 .progress-25 .progress-bar {
-  animation: loading-25 2s linear forwards;
+  animation: loading-25 3s linear forwards;
 }
 .progress-68 .progress-bar {
-  animation: loading-50 1s linear forwards;
+  animation: loading-50 1.5s linear forwards;
 }
 .progress-76 .progress-bar {
-  animation: loading-50 1s linear forwards;
+  animation: loading-50 1.5s linear forwards;
 }
 
 // Customize Progress left
 .progress-left.progress-68 .progress-bar {
-  animation: loading-68 1s linear forwards 1s;
+  animation: loading-68 1.5s linear forwards 1s;
 }
 .progress-left.progress-76 .progress-bar {
-  animation: loading-76 1s linear forwards 1s;
+  animation: loading-76 1.5s linear forwards 1s;
 }
 
 @keyframes loading-50 {
@@ -149,3 +151,34 @@
     margin-bottom: 20px;
   }
 }
+
+.progress-inline {
+  position: relative;
+  padding: 0;
+  width: 80%;
+  background-color: rgb(218, 218, 218);
+  border-radius: 15px;
+}
+.progress-inline .value {
+  background-color: #0d6efd;
+  height: 10px;
+  border-radius: 15px;
+  animation: progres 3s linear forwards;
+}
+@keyframes progres {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 25%;
+  }
+  50% {
+    width: 50%;
+  }
+  75% {
+    width: 60%;
+  }
+  100% {
+    width: 75%;
+  }
+} ;

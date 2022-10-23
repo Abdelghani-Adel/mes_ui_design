@@ -19,11 +19,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
       nav.classList.remove("navbar-shown");
       toggle.classList.remove("bx-x");
       bodypd.classList.remove("body-pd");
-      headerpd.classList.remove("body-pd");
+      headerpd.classList.remove("header-shortened");
     }
   });
 
-  /*===== LINK ACTIVE =====*/
+  /*===== Change Active Class on Links =====*/
   const navLinks = document.querySelectorAll(".nav_link");
 
   function changeActiveState() {

@@ -43,8 +43,8 @@
   --header-height: 3rem;
   --nav-width: 68px;
   // --first-color: #4723d9;
-  --first-color-light: #afa5d9;
-  --white-color: #f7f6fb;
+  --first-color-light: #b6b6b6;
+  --white-color: #fff;
   // --body-font: "Nunito", sans-serif;
   --normal-font-size: 1rem;
   --z-fixed: 100;
@@ -60,6 +60,11 @@
   justify-content: space-between;
   transition: 0.5s;
 }
+
+.header-shortened {
+  padding-left: 25vw;
+}
+
 .nav-toggle {
   font-size: 2rem;
   cursor: pointer;
@@ -76,8 +81,7 @@
 }
 
 .navbar-shown {
-  width: max-content;
-  // display: block;
+  width: 25vw;
   left: 0;
 }
 
@@ -96,7 +100,6 @@
   padding: 0.5rem 0 0.5rem 1.5rem;
 }
 .nav_logo {
-  // justify-content: center;
   margin-bottom: 2rem;
   color: var(--white-color);
   font-weight: 700;
@@ -107,6 +110,7 @@
   color: var(--first-color-light);
   margin-bottom: 1.5rem;
   transition: 0.3s;
+  font-size: 1.2rem;
 }
 .nav_link.active {
   color: var(--white-color);
@@ -127,8 +131,12 @@
   font-size: 2rem;
 }
 
+#content {
+  margin-top: 6vh;
+}
 @media screen and (min-width: 768px) {
   #content {
+    // margin-top: 8vh;
     padding-left: 16vw;
   }
 
@@ -142,14 +150,14 @@
     padding: 1rem 1.5rem 0 0;
   }
 
-  .header-shortened {
-    padding-left: 12vw;
-  }
+  // .header-shortened {
+  //   padding-left: 12vw;
+  // }
 
-  .navbar-shown {
-    width: 12vw;
-  }
-  .body-pd {
-    padding-left: 12vw;
-  }
+  // .navbar-shown {
+  //   width: 12vw;
+  // }
+  // .body-pd {
+  //   padding-left: 12vw;
+  // }
 }

@@ -18,11 +18,12 @@
 
 html,
 body {
-  margin-top: 3vh;
+  margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
   font-size: clamp(10px, 14px, 0.8vw);
   position: relative;
+  transition: 0.5s;
 }
 
 h6 {
@@ -1044,8 +1045,8 @@ hr {
 :root {
   --header-height: 3rem;
   --nav-width: 68px;
-  --first-color-light: #afa5d9;
-  --white-color: #f7f6fb;
+  --first-color-light: #b6b6b6;
+  --white-color: #fff;
   --normal-font-size: 1rem;
   --z-fixed: 100;
 }
@@ -1059,6 +1060,10 @@ hr {
   align-items: center;
   justify-content: space-between;
   transition: 0.5s;
+}
+
+.header-shortened {
+  padding-left: 25vw;
 }
 
 .nav-toggle {
@@ -1077,9 +1082,7 @@ hr {
 }
 
 .navbar-shown {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  width: 25vw;
   left: 0;
 }
 
@@ -1111,6 +1114,7 @@ hr {
   color: var(--first-color-light);
   margin-bottom: 1.5rem;
   transition: 0.3s;
+  font-size: 1.2rem;
 }
 
 .nav_link.active {
@@ -1134,6 +1138,10 @@ hr {
   font-size: 2rem;
 }
 
+#content {
+  margin-top: 6vh;
+}
+
 @media screen and (min-width: 768px) {
   #content {
     padding-left: 16vw;
@@ -1145,15 +1153,6 @@ hr {
     width: 15vw;
     left: 0;
     padding: 1rem 1.5rem 0 0;
-  }
-  .header-shortened {
-    padding-left: 12vw;
-  }
-  .navbar-shown {
-    width: 12vw;
-  }
-  .body-pd {
-    padding-left: 12vw;
   }
 }
 .circle-progress {
@@ -1238,28 +1237,28 @@ hr {
 }
 
 .progress-25 .progress-bar {
-  -webkit-animation: loading-25 2s linear forwards;
-          animation: loading-25 2s linear forwards;
+  -webkit-animation: loading-25 3s linear forwards;
+          animation: loading-25 3s linear forwards;
 }
 
 .progress-68 .progress-bar {
-  -webkit-animation: loading-50 1s linear forwards;
-          animation: loading-50 1s linear forwards;
+  -webkit-animation: loading-50 1.5s linear forwards;
+          animation: loading-50 1.5s linear forwards;
 }
 
 .progress-76 .progress-bar {
-  -webkit-animation: loading-50 1s linear forwards;
-          animation: loading-50 1s linear forwards;
+  -webkit-animation: loading-50 1.5s linear forwards;
+          animation: loading-50 1.5s linear forwards;
 }
 
 .progress-left.progress-68 .progress-bar {
-  -webkit-animation: loading-68 1s linear forwards 1s;
-          animation: loading-68 1s linear forwards 1s;
+  -webkit-animation: loading-68 1.5s linear forwards 1s;
+          animation: loading-68 1.5s linear forwards 1s;
 }
 
 .progress-left.progress-76 .progress-bar {
-  -webkit-animation: loading-76 1s linear forwards 1s;
-          animation: loading-76 1s linear forwards 1s;
+  -webkit-animation: loading-76 1.5s linear forwards 1s;
+          animation: loading-76 1.5s linear forwards 1s;
 }
 
 @-webkit-keyframes loading-50 {
@@ -1346,6 +1345,57 @@ hr {
 @media only screen and (max-width: 990px) {
   .progress {
     margin-bottom: 20px;
+  }
+}
+.progress-inline {
+  position: relative;
+  padding: 0;
+  width: 80%;
+  background-color: rgb(218, 218, 218);
+  border-radius: 15px;
+}
+
+.progress-inline .value {
+  background-color: #0d6efd;
+  height: 10px;
+  border-radius: 15px;
+  -webkit-animation: progres 3s linear forwards;
+          animation: progres 3s linear forwards;
+}
+
+@-webkit-keyframes progres {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 25%;
+  }
+  50% {
+    width: 50%;
+  }
+  75% {
+    width: 60%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+@keyframes progres {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 25%;
+  }
+  50% {
+    width: 50%;
+  }
+  75% {
+    width: 60%;
+  }
+  100% {
+    width: 75%;
   }
 }
 .rounded {

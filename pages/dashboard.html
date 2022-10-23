@@ -37,7 +37,7 @@
         <i class="bx bx-menu" id="nav-toggle"></i>
       </div>
 
-      <div class="d-flex">
+      <div class="d-flex col-md-12">
         <!--  -->
         <div class="d-none d-md-flex align-items-center">
           <button class="btn bg-lightblue txt-blue dropdown-toggle">
@@ -117,14 +117,15 @@
       </nav>
     </div>
     <!-- End SIDE Bar -->
+
     <div class="container-fluid" id="content">
       <!-- START CONTENT -->
-      <div class="row g-3 overflow-auto">
+      <div class="row">
         <!-- Title -->
-        <h3 class="mb-4">Dashboard</h3>
+        <h3 class="mb-3">Dashboard</h3>
 
         <div class="col-12 col-md-9">
-          <div class="row g-3 flex-column flex-md-row mb-3">
+          <div class="row flex-column flex-md-row mb-4">
             <!-- Start Total Production Card -->
             <div class="col-12 col-md-6 col-xxl-3">
               <div class="box-shadow rounded-2 bg-white p-3 h-100">
@@ -147,8 +148,12 @@
                 </div>
                 <!--  -->
                 <div class="d-flex align-items-center justify-content-between">
-                  <div class="progress w-75 me-2" style="height: 10px">
+                  <!-- <div class="progress w-75 me-2" style="height: 10px">
                     <div class="progress-bar w-75"></div>
+                  </div> -->
+
+                  <div class="progress-inline">
+                    <div class="value"></div>
                   </div>
                   <p class="fs-4 mb-0">75%</p>
                 </div>
@@ -237,8 +242,8 @@
                 </div>
                 <!--  -->
                 <div class="d-flex align-items-center justify-content-between">
-                  <div class="progress w-75 me-2" style="height: 10px">
-                    <div class="progress-bar w-75"></div>
+                  <div class="progress-inline">
+                    <div class="value"></div>
                   </div>
                   <p class="fs-4 mb-0">75%</p>
                 </div>
@@ -466,15 +471,17 @@
           <!-- End Current Activity -->
         </div>
 
+        <!-- Alerts | Notifications -->
         <div class="col-12 col-md-3">
           <div class="row m-0 box-shadow rounded-2 bg-white p-3">
-            <!-- Alerts -->
-            <div class="col-6 col-md-12">
+            <!-- Start Alerts -->
+            <div class="col-6 col-md-12 mb-4">
               <h6 class="txt-alert">
                 <div class="dot bg-alert"></div>
                 ALERTS
               </h6>
               <hr />
+              <!-- alert -->
               <div class="d-flex align-items-center fm-montserrat fw-medium">
                 <div class="col-3 text-center">
                   <img src="../assets/resources.png" class="mr-3" />
@@ -488,6 +495,7 @@
                 </div>
               </div>
               <hr />
+              <!-- alert -->
               <div class="d-flex align-items-center fm-montserrat fw-medium">
                 <div class="col-3 text-center">
                   <img src="../assets/resources.png" class="mr-3" />
@@ -501,6 +509,7 @@
                 </div>
               </div>
               <hr />
+              <!-- alert -->
               <div class="d-flex align-items-center fm-montserrat fw-medium">
                 <div class="col-3 text-center">
                   <img src="../assets/load.png" class="mr-3" />
@@ -514,6 +523,7 @@
                 </div>
               </div>
               <hr />
+              <!-- alert -->
               <div class="d-flex align-items-center fm-montserrat fw-medium">
                 <div class="col-3 text-center">
                   <img src="../assets/performance.png" class="mr-3" />
@@ -527,6 +537,21 @@
                 </div>
               </div>
               <hr />
+              <!-- alert -->
+              <div class="d-flex align-items-center fm-montserrat fw-medium">
+                <div class="col-3 text-center">
+                  <img src="../assets/performance.png" class="mr-3" />
+                </div>
+                <div class="col-9">
+                  <p class="mb-0">Low production yield count</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="mb-0">id</p>
+                    <p class="mb-0 fw-bold">4017702</p>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <!-- alert -->
               <div class="d-flex align-items-center fm-montserrat fw-medium">
                 <div class="col-3 text-center">
                   <img src="../assets/performance.png" class="mr-3" />
@@ -541,14 +566,16 @@
               </div>
               <hr />
             </div>
+            <!-- End Alerts -->
 
-            <!-- Notifications -->
+            <!-- Start Notifications -->
             <div class="col-6 col-md-12">
               <h6 class="txt-lightgreen">
                 <div class="dot bg-lightgreen"></div>
                 NOTIFICATION
               </h6>
               <hr />
+              <!-- notification -->
               <div class="d-flex align-items-center fm-montserrat fw-medium">
                 <div class="col-3 text-center">
                   <img src="../assets/resources.png" class="mr-3" />
@@ -562,6 +589,7 @@
                 </div>
               </div>
               <hr />
+              <!-- notification -->
               <div class="d-flex align-items-center fm-montserrat fw-medium">
                 <div class="col-3 text-center">
                   <img src="../assets/resources.png" class="mr-3" />
@@ -575,6 +603,7 @@
                 </div>
               </div>
               <hr />
+              <!-- notification -->
               <div class="d-flex align-items-center fm-montserrat fw-medium">
                 <div class="col-3 text-center">
                   <img src="../assets/load.png" class="mr-3" />
@@ -588,6 +617,7 @@
                 </div>
               </div>
               <hr />
+              <!-- notification -->
               <div class="d-flex align-items-center fm-montserrat fw-medium">
                 <div class="col-3 text-center">
                   <img src="../assets/load.png" class="mr-3" />
@@ -601,6 +631,21 @@
                 </div>
               </div>
               <hr />
+              <!-- notification -->
+              <div class="d-flex align-items-center fm-montserrat fw-medium">
+                <div class="col-3 text-center">
+                  <img src="../assets/performance.png" class="mr-3" />
+                </div>
+                <div class="col-9">
+                  <p class="mb-0">Low production yield count</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="mb-0">id</p>
+                    <p class="mb-0 fw-bold">4017702</p>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <!-- notification -->
               <div class="d-flex align-items-center fm-montserrat fw-medium">
                 <div class="col-3 text-center">
                   <img src="../assets/performance.png" class="mr-3" />
@@ -615,6 +660,7 @@
               </div>
               <hr />
             </div>
+            <!-- End Notification -->
           </div>
         </div>
       </div>
