@@ -1252,13 +1252,13 @@ hr {
 }
 
 .progress-left.progress-68 .progress-bar {
-  -webkit-animation: loading-68 1.5s linear forwards 1s;
-          animation: loading-68 1.5s linear forwards 1s;
+  -webkit-animation: loading-68 1.5s linear forwards 1.5s;
+          animation: loading-68 1.5s linear forwards 1.5s;
 }
 
 .progress-left.progress-76 .progress-bar {
-  -webkit-animation: loading-76 1.5s linear forwards 1s;
-          animation: loading-76 1.5s linear forwards 1s;
+  -webkit-animation: loading-76 1.5s linear forwards 1.5s;
+          animation: loading-76 1.5s linear forwards 1.5s;
 }
 
 @-webkit-keyframes loading-50 {
