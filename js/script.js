@@ -1,23 +1,40 @@
-$(function () {
-  $(".circle-progress").each(function () {
-    var value = $(this).attr("data-value");
-    var left = $(this).find(".circle-progress-left .circle-progress-bar");
-    var right = $(this).find(".circle-progress-right .circle-progress-bar");
+document.addEventListener("DOMContentLoaded", function (event) {
+  const content = document.getElementById("content");
+  const nav = document.getElementById("nav-bar");
+  const bodypd = document.getElementById("body-pd");
+  const toggle = document.getElementById("nav-toggle");
+  const headerpd = document.getElementById("header");
 
-    if (value > 0) {
-      if (value <= 50) {
-        right.css("transform", "rotate(" + percentageToDegrees(value) + "deg)");
-      } else {
-        right.css("transform", "rotate(180deg)");
-        left.css(
-          "transform",
-          "rotate(" + percentageToDegrees(value - 50) + "deg)"
-        );
-      }
+  // Show nav bar on clicking on toggle button
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("show");
+    toggle.classList.toggle("bx-x");
+    bodypd.classList.toggle("body-pd");
+    headerpd.classList.toggle("body-pd");
+  });
+
+  // Hide nav bar on clicking on content area
+  content.addEventListener("click", () => {
+    if (nav.classList.contains("show")) {
+      nav.classList.remove("show");
+      toggle.classList.remove("bx-x");
+      bodypd.classList.remove("body-pd");
+      headerpd.classList.remove("body-pd");
     }
   });
 
-  function percentageToDegrees(percentage) {
-    return (percentage / 100) * 360;
+  // showNavbar("nav-toggle", "nav-bar", "body-pd", "header");
+
+  /*===== LINK ACTIVE =====*/
+  const linkColor = document.querySelectorAll(".nav_link");
+
+  function colorLink() {
+    if (linkColor) {
+      linkColor.forEach((l) => l.classList.remove("active"));
+      this.classList.add("active");
+    }
   }
+  linkColor.forEach((l) => l.addEventListener("click", colorLink));
+
+  // Your code to run since DOM is loaded and ready
 });

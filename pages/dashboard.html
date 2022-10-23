@@ -18,683 +18,607 @@
 
     <link
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
 
     <link rel="stylesheet" href="../css/sass/main.css" />
     <title>Dashboard</title>
   </head>
-  <body>
-    <div class="container-fluid">
-      <div class="row">
-        <!-- START SIDE BAR -->
-        <div class="col-2 pl-0 fs-5 bg-primary txt-white-3 position-fixed">
-          <div class="d-flex flex-column h-100vh">
-            <!-- logo -->
-            <a
-              href="../index.html"
-              class="d-flex mx-auto mt-4 mb-5 fs-2 text-white"
-              ><img src="../assets/navIcon.svg" class="me-3" /> MES</a
-            >
+  <body id="body-pd" class="bg-white-3">
+    <!-- Start Header -->
+    <header class="header box-shadow bg-white" id="header">
+      <!-- Toggle Button -->
+      <div class="nav-toggle txt-primary ms-3 mr-4">
+        <i class="bx bx-menu" id="nav-toggle"></i>
+      </div>
 
-            <!-- Nav-Menu -->
-            <ul class="nav nav-pills flex-column" id="menu">
-              <li class="nav-item">
-                <a href="./dashboard.html" class="nav-link active">
-                  <i class="fa-solid fa-gauge"></i>
-                  <span>Dashboard</span>
-                </a>
-              </li>
+      <div class="d-flex">
+        <!--  -->
+        <div class="d-flex align-items-center">
+          <button class="btn bg-lightblue txt-blue dropdown-toggle">
+            <i class="fa-solid fa-building mx-2"></i> Factory Name
+          </button>
 
-              <li class="nav-item">
-                <a href="#submenu2" data-bs-toggle="collapse" class="nav-link">
-                  <i class="fa-solid fa-hotel"></i>
-                  <span>Resources</span></a
-                >
-                <ul
-                  class="collapse nav flex-column ms-1 pl-5"
-                  id="submenu2"
-                  data-bs-parent="#menu"
-                >
-                  <li class="w-100">
-                    <a href="#" class="nav-link px-0 d-flex">
-                      <span class="d-none d-sm-inline">Material</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="nav-link px-0">
-                      <span class="d-none d-sm-inline">Energy</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="nav-link px-0">
-                      <span class="d-none d-sm-inline">Man Power</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
+          <button class="btn bg-lightblue mx-3">
+            <img src="../assets/function.png" alt="" />
+          </button>
 
-              <li class="nav-item">
-                <a href="#submenu1" class="nav-link">
-                  <i class="fa-solid fa-industry"></i>
-                  <span>Manufacturing</span>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="#submenu1" class="nav-link">
-                  <i class="fa-solid fa-screwdriver-wrench"></i>
-                  <span>Machines</span>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="#submenu1" class="nav-link">
-                  <i class="fa-solid fa-repeat"></i>
-                  <span>Planning</span>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="#submenu1" class="nav-link">
-                  <i class="fa-solid fa-triangle-exclamation"></i>
-                  <span>Issues</span>
-                </a>
-              </li>
-            </ul>
-
-            <ul
-              class="nav nav-pills flex-columnalign-items-center align-items-sm-start mt-auto"
-            >
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fa-solid fa-sliders"></i>
-                  <span>Settings</span>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="../index.html" class="nav-link">
-                  <i class="fa-solid fa-right-from-bracket"></i>
-                  <span>Logout</span>
-                </a>
-              </li>
-            </ul>
+          <div>
+            <img src="../assets/load.png" alt="" />
           </div>
         </div>
-        <!-- End SIDE Bar -->
 
-        <!-- START CONTENT AREA -->
-        <div class="col-10 offset-2 bg-white-3">
-          <!-- Start Top Header -->
-          <div class="row bg-white py-1 mb-5 box-shadow">
-            <div class="col-12 d-flex">
-              <!--  -->
-              <div class="d-flex align-items-center">
-                <button class="btn bg-lightblue txt-blue dropdown-toggle">
-                  <i class="fa-solid fa-building mx-2"></i> Factory Name
-                </button>
-
-                <button class="btn bg-lightblue mx-3">
-                  <img src="../assets/function.png" alt="" />
-                </button>
-
-                <div>
-                  <img src="../assets/load.png" alt="" />
-                </div>
-              </div>
-
-              <!--  -->
-              <div class="d-flex align-items-center ms-auto">
-                <button class="btn bg-lightblue txt-blue">Today</button>
-                <button class="btn txt-gray">Yesterday</button>
-                <button class="btn txt-gray">Lastweek</button>
-                <button class="btn txt-gray fs-5">
-                  <i class="fa-regular fa-calendar"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- End Top Header -->
-
-          <!-- START CONTENT -->
-          <div class="row g-3 px-5 overflow-auto">
-            <!-- Title -->
-            <h3 class="mb-4">Dashboard</h3>
-
-            <div class="col-12 col-md-9">
-              <div class="row g-3 flex-column flex-md-row mb-3">
-                <!-- Start Total Production Card -->
-                <div class="col-12 col-md-6 col-xxl-3">
-                  <div class="box-shadow rounded-2 bg-white p-3 h-100">
-                    <!--  -->
-                    <h6 class="d-flex align-items-center">
-                      <img src="../assets/product.png" class="mr-3" /> Total
-                      Production
-                    </h6>
-                    <!--  -->
-                    <hr />
-                    <div class="d-flex justify-content-between">
-                      <div>
-                        <p class="mb-0 fs-5 fm-montserrat fw-medium">
-                          5,000 km
-                        </p>
-                        <p class="txt-blue">Actual Production</p>
-                      </div>
-                      <div>
-                        <p class="mb-0 fs-5 fm-montserrat fw-medium">
-                          7,000 km
-                        </p>
-                        <p class="txt-gray">Planned Production</p>
-                      </div>
-                    </div>
-                    <!--  -->
-                    <div
-                      class="d-flex align-items-center justify-content-between"
-                    >
-                      <div class="progress w-75 me-2" style="height: 10px">
-                        <div class="progress-bar w-75"></div>
-                      </div>
-                      <p class="fs-4 mb-0">75%</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Total Production Card -->
-
-                <!-- Start Performance Indicator KPI -->
-                <div class="col-12 col-md-6">
-                  <div class="box-shadow rounded-2 bg-white p-3 h-100">
-                    <!--  -->
-                    <h6 class="d-flex align-items-center">
-                      <img src="../assets/performance.png" class="mr-3" />
-                      Performance Indicator KPI
-                    </h6>
-
-                    <!--  -->
-                    <hr />
-                    <!-- Circle Progress Bars -->
-                    <div class="d-flex justify-content-between text-center">
-                      <!--  -->
-                      <div>
-                        <div class="circle-progress blue mb-2">
-                          <span class="progress-left progress-76">
-                            <span class="progress-bar"></span>
-                          </span>
-                          <span class="progress-right progress-76">
-                            <span class="progress-bar"></span>
-                          </span>
-                          <p class="progress-value">76%</p>
-                        </div>
-                        <h6>Availability</h6>
-                      </div>
-                      <!--  -->
-                      <div>
-                        <div class="circle-progress blue mb-2">
-                          <span class="progress-left progress-68">
-                            <span class="progress-bar"></span>
-                          </span>
-                          <span class="progress-right progress-68">
-                            <span class="progress-bar"></span>
-                          </span>
-                          <p class="progress-value">68%</p>
-                        </div>
-                        <h6>Performance</h6>
-                      </div>
-                      <!--  -->
-                      <div>
-                        <div class="circle-progress blue mb-2">
-                          <!-- <span class="progress-left">
-                            <span class="progress-bar"></span>
-                          </span> -->
-                          <span class="progress-right progress-25">
-                            <span class="progress-bar"></span>
-                          </span>
-                          <p class="progress-value">25%</p>
-                        </div>
-                        <h6>Quality</h6>
-                      </div>
-                    </div>
-
-                    <!-- END -->
-                  </div>
-                </div>
-                <!-- End Performance Indicator KPI -->
-
-                <!-- Start Material Consumption -->
-                <div class="col-12 col-xxl-3">
-                  <div class="box-shadow rounded-2 bg-white p-3 h-100">
-                    <!--  -->
-                    <h6 class="d-flex align-items-center">
-                      <img src="../assets/material.png" class="mr-3" /> Material
-                      Consumption
-                    </h6>
-                    <!--  -->
-                    <hr />
-                    <div class="d-flex justify-content-between">
-                      <div>
-                        <p class="mb-0 fs-5 fm-montserrat fw-medium">
-                          5,000 km
-                        </p>
-                        <p class="txt-blue">Actual Production</p>
-                      </div>
-                      <div>
-                        <p class="mb-0 fs-5 fm-montserrat fw-medium">
-                          7,000 km
-                        </p>
-                        <p class="txt-gray">Planned Production</p>
-                      </div>
-                    </div>
-                    <!--  -->
-                    <div
-                      class="d-flex align-items-center justify-content-between"
-                    >
-                      <div class="progress w-75 me-2" style="height: 10px">
-                        <div class="progress-bar w-75"></div>
-                      </div>
-                      <p class="fs-4 mb-0">75%</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Material Consumption -->
-              </div>
-
-              <!-- Start Current Activity -->
-              <div class="box-shadow rounded-2 bg-white p-3 mb-3">
-                <!-- Start Header -->
-                <div class="d-flex mb-0 pb-0">
-                  <h6 class="d-flex align-items-center w-25">
-                    <img src="../assets/activity.png" />Current Activity
-                  </h6>
-
-                  <div class="d-flex ms-auto">
-                    <button
-                      class="bg-white border-0 border-bottom border-primary txt-blue"
-                    >
-                      <img src="../assets/function.png" class="mr-3" />Function
-                    </button>
-                    <button class="btn txt-gray">
-                      <img src="../assets/route.png" /> Route
-                    </button>
-                    <button class="btn txt-gray">
-                      <img src="../assets/jobOrder.png" /> Job order
-                    </button>
-                  </div>
-                </div>
-                <hr class="mt-0 pt-0" />
-                <!-- End Header -->
-
-                <!-- Start Activities -->
-                <div class="p-4 mt-3">
-                  <!-- Assembly -->
-                  <div class="row">
-                    <h6 class="col-3">Assembly</h6>
-                    <p class="col-3">
-                      <i class="dot bg-astronaut"></i>Pourtier 2200/2 Low
-                      Voltage - Assembly
-                    </p>
-                    <p class="col-3">
-                      <i class="dot bg-astronaut"></i>Pourtier 2200/2 Low
-                      Voltage - Assembly
-                    </p>
-                    <p class="col-3">
-                      <i class="dot bg-astronaut"></i>Pourtier 2200/2 Low
-                      Voltage - Assembly
-                    </p>
-                  </div>
-
-                  <hr />
-
-                  <!-- Assembly Armoring -->
-                  <div class="row">
-                    <h6 class="col-3">Assembly Armoring</h6>
-                    <p class="col-3">
-                      <i class="dot bg-egg-blue"></i>Pourtier 2200/2 Low Voltage
-                      - Assembly
-                    </p>
-                    <p class="col-3">
-                      <i class="dot bg-egg-blue"></i>Pourtier 2200/2 Low Voltage
-                      - Assembly
-                    </p>
-                    <p class="col-3">
-                      <i class="dot bg-egg-blue"></i>Pourtier 2200/2 Low Voltage
-                      - Assembly
-                    </p>
-                  </div>
-
-                  <hr />
-
-                  <!-- Drawing -->
-                  <div class="row">
-                    <h6 class="col-3">Drawing</h6>
-                    <p class="col-3">
-                      <i class="dot bg-shamrock"></i>Pourtier 2200/2 Low Voltage
-                      - Assembly
-                    </p>
-                    <p class="col-3">
-                      <i class="dot bg-shamrock"></i>Pourtier 2200/2 Low Voltage
-                      - Assembly
-                    </p>
-                    <p class="col-3">
-                      <i class="dot bg-shamrock"></i>Pourtier 2200/2 Low Voltage
-                      - Assembly
-                    </p>
-                  </div>
-
-                  <hr />
-
-                  <!-- Extrusion -->
-                  <div class="row">
-                    <h6 class="col-3">Extrusion</h6>
-                    <p class="col-3">
-                      <i class="dot bg-atlantis"></i>Pourtier 2200/2 Low Voltage
-                      - Assembly
-                    </p>
-                    <p class="col-3">
-                      <i class="dot bg-atlantis"></i>Pourtier 2200/2 Low Voltage
-                      - Assembly
-                    </p>
-                    <p class="col-3">
-                      <i class="dot bg-atlantis"></i>Pourtier 2200/2 Low Voltage
-                      - Assembly
-                    </p>
-                  </div>
-
-                  <hr />
-
-                  <!-- Insulation -->
-                  <div class="row">
-                    <h6 class="col-3">Insulation</h6>
-                    <div class="col-3">
-                      <p>
-                        <i class="dot bg-corn"></i>Pourtier 2200/2 Low Voltage -
-                        Assembly
-                      </p>
-                      <p>
-                        <i class="dot bg-corn"></i>Pourtier 2200/2 Low Voltage -
-                        Assembly
-                      </p>
-                    </div>
-                    <p class="col-3">
-                      <i class="dot bg-corn"></i>Pourtier 2200/2 Low Voltage -
-                      Assembly
-                    </p>
-                    <p class="col-3">
-                      <i class="dot bg-corn"></i>Pourtier 2200/2 Low Voltage -
-                      Assembly
-                    </p>
-                  </div>
-
-                  <hr />
-
-                  <!-- Insulation - Extrusion -->
-                  <div class="row">
-                    <h6 class="col-3">Insulation - Extrusion</h6>
-                    <div class="col-3">
-                      <p>
-                        <i class="dot bg-corn"></i>Pourtier 2200/2 Low Voltage -
-                        Assembly
-                      </p>
-                      <p>
-                        <i class="dot bg-submarine"></i>Pourtier 2200/2 Low
-                        Voltage - Assembly
-                      </p>
-                    </div>
-                    <p class="col-3">
-                      <i class="dot bg-corn"></i>Pourtier 2200/2 Low Voltage -
-                      Assembly
-                    </p>
-                    <p class="col-3">
-                      <i class="dot bg-corn"></i>Pourtier 2200/2 Low Voltage -
-                      Assembly
-                    </p>
-                  </div>
-
-                  <hr />
-
-                  <!-- Armoring -->
-                  <div class="row">
-                    <h6 class="col-3">Lead</h6>
-                    <div class="col-3">
-                      <p>
-                        <i class="dot bg-mulberry"></i>Pourtier 2200/2 Low
-                        Voltage - Assembly
-                      </p>
-                    </div>
-                    <p class="col-3">
-                      <i class="dot bg-mulberry"></i>Pourtier 2200/2 Low Voltage
-                      - Assembly
-                    </p>
-                    <p class="col-3">
-                      <i class="dot bg-mulberry"></i>Pourtier 2200/2 Low Voltage
-                      - Assembly
-                    </p>
-                  </div>
-
-                  <hr />
-
-                  <!-- Screening -->
-                  <div class="row">
-                    <h6 class="col-3">Screening</h6>
-                    <div class="col-3">
-                      <p>
-                        <i class="dot bg-astronaut-blue"></i>Pourtier 2200/2 Low
-                        Voltage - Assembly
-                      </p>
-                    </div>
-                    <p class="col-3">
-                      <i class="dot bg-astronaut-blue"></i>Pourtier 2200/2 Low
-                      Voltage - Assembly
-                    </p>
-                    <p class="col-3">
-                      <i class="dot bg-astronaut-blue"></i>Pourtier 2200/2 Low
-                      Voltage - Assembly
-                    </p>
-                  </div>
-
-                  <hr />
-
-                  <!-- Stranding -->
-                  <div class="row">
-                    <h6 class="col-3">Stranding</h6>
-                    <div class="col-3">
-                      <p>
-                        <i class="dot bg-ebony-clay"></i>Pourtier 2200/2 Low
-                        Voltage - Assembly
-                      </p>
-                    </div>
-                    <p class="col-3">
-                      <i class="dot bg-ebony-clay"></i>Pourtier 2200/2 Low
-                      Voltage - Assembly
-                    </p>
-                    <p class="col-3">
-                      <i class="dot bg-ebony-clay"></i>Pourtier 2200/2 Low
-                      Voltage - Assembly
-                    </p>
-                  </div>
-                </div>
-                <!-- End Activities -->
-              </div>
-              <!-- End Current Activity -->
-            </div>
-
-            <div class="col-12 col-md-3">
-              <div class="row m-0 box-shadow rounded-2 bg-white p-3">
-                <!-- Alerts -->
-                <div class="col-6 col-md-12">
-                  <h6 class="txt-alert">
-                    <div class="dot bg-alert"></div>
-                    ALERTS
-                  </h6>
-                  <hr />
-                  <div
-                    class="d-flex align-items-center fm-montserrat fw-medium"
-                  >
-                    <div class="col-3 text-center">
-                      <img src="../assets/resources.png" class="mr-3" />
-                    </div>
-                    <div class="col-9">
-                      <p class="mb-0">Confirm mass on machine</p>
-                      <div class="d-flex justify-content-between">
-                        <p class="mb-0">id</p>
-                        <p class="mb-0 fw-bold">4017702</p>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                  <div
-                    class="d-flex align-items-center fm-montserrat fw-medium"
-                  >
-                    <div class="col-3 text-center">
-                      <img src="../assets/resources.png" class="mr-3" />
-                    </div>
-                    <div class="col-9">
-                      <p class="mb-0">Machine stoppage</p>
-                      <div class="d-flex justify-content-between">
-                        <p class="mb-0">id</p>
-                        <p class="mb-0 fw-bold">4017702</p>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                  <div
-                    class="d-flex align-items-center fm-montserrat fw-medium"
-                  >
-                    <div class="col-3 text-center">
-                      <img src="../assets/load.png" class="mr-3" />
-                    </div>
-                    <div class="col-9">
-                      <p class="mb-0">Machine stopage</p>
-                      <div class="d-flex justify-content-between">
-                        <p class="mb-0">id</p>
-                        <p class="mb-0 fw-bold">4017702</p>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                  <div
-                    class="d-flex align-items-center fm-montserrat fw-medium"
-                  >
-                    <div class="col-3 text-center">
-                      <img src="../assets/performance.png" class="mr-3" />
-                    </div>
-                    <div class="col-9">
-                      <p class="mb-0">Low production yield count</p>
-                      <div class="d-flex justify-content-between">
-                        <p class="mb-0">id</p>
-                        <p class="mb-0 fw-bold">4017702</p>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                  <div
-                    class="d-flex align-items-center fm-montserrat fw-medium"
-                  >
-                    <div class="col-3 text-center">
-                      <img src="../assets/performance.png" class="mr-3" />
-                    </div>
-                    <div class="col-9">
-                      <p class="mb-0">Low production yield count</p>
-                      <div class="d-flex justify-content-between">
-                        <p class="mb-0">id</p>
-                        <p class="mb-0 fw-bold">4017702</p>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                </div>
-
-                <!-- Notifications -->
-                <div class="col-6 col-md-12">
-                  <h6 class="txt-lightgreen">
-                    <div class="dot bg-lightgreen"></div>
-                    NOTIFICATION
-                  </h6>
-                  <hr />
-                  <div
-                    class="d-flex align-items-center fm-montserrat fw-medium"
-                  >
-                    <div class="col-3 text-center">
-                      <img src="../assets/resources.png" class="mr-3" />
-                    </div>
-                    <div class="col-9">
-                      <p class="mb-0">Confirm mass on machine</p>
-                      <div class="d-flex justify-content-between">
-                        <p class="mb-0">id</p>
-                        <p class="mb-0 fw-bold">4017702</p>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                  <div
-                    class="d-flex align-items-center fm-montserrat fw-medium"
-                  >
-                    <div class="col-3 text-center">
-                      <img src="../assets/resources.png" class="mr-3" />
-                    </div>
-                    <div class="col-9">
-                      <p class="mb-0">Confirm mass on machine</p>
-                      <div class="d-flex justify-content-between">
-                        <p class="mb-0">id</p>
-                        <p class="mb-0 fw-bold">4017702</p>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                  <div
-                    class="d-flex align-items-center fm-montserrat fw-medium"
-                  >
-                    <div class="col-3 text-center">
-                      <img src="../assets/load.png" class="mr-3" />
-                    </div>
-                    <div class="col-9">
-                      <p class="mb-0">Machine stoppage</p>
-                      <div class="d-flex justify-content-between">
-                        <p class="mb-0">id</p>
-                        <p class="mb-0 fw-bold">4017702</p>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                  <div
-                    class="d-flex align-items-center fm-montserrat fw-medium"
-                  >
-                    <div class="col-3 text-center">
-                      <img src="../assets/load.png" class="mr-3" />
-                    </div>
-                    <div class="col-9">
-                      <p class="mb-0">Machine stopage</p>
-                      <div class="d-flex justify-content-between">
-                        <p class="mb-0">id</p>
-                        <p class="mb-0 fw-bold">4017702</p>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                  <div
-                    class="d-flex align-items-center fm-montserrat fw-medium"
-                  >
-                    <div class="col-3 text-center">
-                      <img src="../assets/performance.png" class="mr-3" />
-                    </div>
-                    <div class="col-9">
-                      <p class="mb-0">Low production yield count</p>
-                      <div class="d-flex justify-content-between">
-                        <p class="mb-0">id</p>
-                        <p class="mb-0 fw-bold">4017702</p>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- END CONTENT -->
+        <!--  -->
+        <div class="d-flex align-items-center ms-auto">
+          <button class="btn bg-lightblue txt-blue">Today</button>
+          <button class="btn txt-gray">Yesterday</button>
+          <button class="btn txt-gray">Lastweek</button>
+          <button class="btn txt-gray fs-5">
+            <i class="fa-regular fa-calendar"></i>
+          </button>
         </div>
       </div>
+    </header>
+    <!-- End Header -->
+
+    <div class="l-navbar bg-primary" id="nav-bar">
+      <nav class="nav">
+        <div>
+          <a href="#" class="nav_logo">
+            <img src="../assets/navIcon.svg" alt="" />
+            <span class="nav_logo-name">MES</span>
+          </a>
+          <div class="nav_list">
+            <a href="#" class="nav_link active">
+              <i class="bx bx-grid-alt nav_icon"></i>
+              <span class="nav_name">Dashboard</span>
+            </a>
+            <a href="#" class="nav_link">
+              <i class="bx bx-add-to-queue nav_icon"></i>
+              <span class="nav_name">Resources</span>
+            </a>
+            <a href="#" class="nav_link">
+              <i class="bx bx-buildings nav_icon"></i>
+              <span class="nav_name">Manufacturing</span>
+            </a>
+            <a href="#" class="nav_link">
+              <i class="bx bx-wrench nav_icon"></i>
+              <span class="nav_name">Machines</span>
+            </a>
+            <a href="#" class="nav_link">
+              <i class="bx bx-analyse nav_icon"></i>
+              <span class="nav_name">Planning</span>
+            </a>
+            <a href="#" class="nav_link">
+              <i class="bx bx-error nav_icon"></i>
+              <span class="nav_name">Issues</span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <a href="#" class="nav_link">
+            <i class="bx bx-cog nav_icon"></i>
+            <span class="nav_name">Settings</span>
+          </a>
+          <a href="#" class="nav_link">
+            <i class="bx bx-log-out nav_icon"></i>
+            <span class="nav_name">SignOut</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+    <!-- End SIDE Bar -->
+    <div class="container-fluid" id="content">
+      <!-- START CONTENT -->
+      <div class="row g-3 overflow-auto">
+        <!-- Title -->
+        <h3 class="mb-4">Dashboard</h3>
+
+        <div class="col-12 col-md-9">
+          <div class="row g-3 flex-column flex-md-row mb-3">
+            <!-- Start Total Production Card -->
+            <div class="col-12 col-md-6 col-xxl-3">
+              <div class="box-shadow rounded-2 bg-white p-3 h-100">
+                <!--  -->
+                <h6 class="d-flex align-items-center">
+                  <img src="../assets/product.png" class="mr-3" /> Total
+                  Production
+                </h6>
+                <!--  -->
+                <hr />
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <p class="mb-0 fs-5 fm-montserrat fw-medium">5,000 km</p>
+                    <p class="txt-blue">Actual Production</p>
+                  </div>
+                  <div>
+                    <p class="mb-0 fs-5 fm-montserrat fw-medium">7,000 km</p>
+                    <p class="txt-gray">Planned Production</p>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="progress w-75 me-2" style="height: 10px">
+                    <div class="progress-bar w-75"></div>
+                  </div>
+                  <p class="fs-4 mb-0">75%</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Total Production Card -->
+
+            <!-- Start Performance Indicator KPI -->
+            <div class="col-12 col-md-6">
+              <div class="box-shadow rounded-2 bg-white p-3 h-100">
+                <!--  -->
+                <h6 class="d-flex align-items-center">
+                  <img src="../assets/performance.png" class="mr-3" />
+                  Performance Indicator KPI
+                </h6>
+
+                <!--  -->
+                <hr />
+                <!-- Circle Progress Bars -->
+                <div class="d-flex justify-content-between text-center">
+                  <!--  -->
+                  <div>
+                    <div class="circle-progress blue mb-2">
+                      <span class="progress-left progress-76">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right progress-76">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <p class="progress-value">76%</p>
+                    </div>
+                    <h6>Availability</h6>
+                  </div>
+                  <!--  -->
+                  <div>
+                    <div class="circle-progress blue mb-2">
+                      <span class="progress-left progress-68">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right progress-68">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <p class="progress-value">68%</p>
+                    </div>
+                    <h6>Performance</h6>
+                  </div>
+                  <!--  -->
+                  <div>
+                    <div class="circle-progress blue mb-2">
+                      <!-- <span class="progress-left">
+                            <span class="progress-bar"></span>
+                          </span> -->
+                      <span class="progress-right progress-25">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <p class="progress-value">25%</p>
+                    </div>
+                    <h6>Quality</h6>
+                  </div>
+                </div>
+
+                <!-- END -->
+              </div>
+            </div>
+            <!-- End Performance Indicator KPI -->
+
+            <!-- Start Material Consumption -->
+            <div class="col-12 col-xxl-3">
+              <div class="box-shadow rounded-2 bg-white p-3 h-100">
+                <!--  -->
+                <h6 class="d-flex align-items-center">
+                  <img src="../assets/material.png" class="mr-3" /> Material
+                  Consumption
+                </h6>
+                <!--  -->
+                <hr />
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <p class="mb-0 fs-5 fm-montserrat fw-medium">5,000 km</p>
+                    <p class="txt-blue">Actual Production</p>
+                  </div>
+                  <div>
+                    <p class="mb-0 fs-5 fm-montserrat fw-medium">7,000 km</p>
+                    <p class="txt-gray">Planned Production</p>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="progress w-75 me-2" style="height: 10px">
+                    <div class="progress-bar w-75"></div>
+                  </div>
+                  <p class="fs-4 mb-0">75%</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Material Consumption -->
+          </div>
+
+          <!-- Start Current Activity -->
+          <div class="box-shadow rounded-2 bg-white p-3 mb-3">
+            <!-- Start Header -->
+            <div class="d-flex mb-0 pb-0">
+              <h6 class="d-flex align-items-center w-25">
+                <img src="../assets/activity.png" />Current Activity
+              </h6>
+
+              <div class="d-flex ms-auto">
+                <button
+                  class="bg-white border-0 border-bottom border-primary txt-blue"
+                >
+                  <img src="../assets/function.png" class="mr-3" />Function
+                </button>
+                <button class="btn txt-gray">
+                  <img src="../assets/route.png" /> Route
+                </button>
+                <button class="btn txt-gray">
+                  <img src="../assets/jobOrder.png" /> Job order
+                </button>
+              </div>
+            </div>
+            <hr class="mt-0 pt-0" />
+            <!-- End Header -->
+
+            <!-- Start Activities -->
+            <div class="p-4 mt-3">
+              <!-- Assembly -->
+              <div class="row">
+                <h6 class="col-3">Assembly</h6>
+                <p class="col-3">
+                  <i class="dot bg-astronaut"></i>Pourtier 2200/2 Low Voltage -
+                  Assembly
+                </p>
+                <p class="col-3">
+                  <i class="dot bg-astronaut"></i>Pourtier 2200/2 Low Voltage -
+                  Assembly
+                </p>
+                <p class="col-3">
+                  <i class="dot bg-astronaut"></i>Pourtier 2200/2 Low Voltage -
+                  Assembly
+                </p>
+              </div>
+
+              <hr />
+
+              <!-- Assembly Armoring -->
+              <div class="row">
+                <h6 class="col-3">Assembly Armoring</h6>
+                <p class="col-3">
+                  <i class="dot bg-egg-blue"></i>Pourtier 2200/2 Low Voltage -
+                  Assembly
+                </p>
+                <p class="col-3">
+                  <i class="dot bg-egg-blue"></i>Pourtier 2200/2 Low Voltage -
+                  Assembly
+                </p>
+                <p class="col-3">
+                  <i class="dot bg-egg-blue"></i>Pourtier 2200/2 Low Voltage -
+                  Assembly
+                </p>
+              </div>
+
+              <hr />
+
+              <!-- Drawing -->
+              <div class="row">
+                <h6 class="col-3">Drawing</h6>
+                <p class="col-3">
+                  <i class="dot bg-shamrock"></i>Pourtier 2200/2 Low Voltage -
+                  Assembly
+                </p>
+                <p class="col-3">
+                  <i class="dot bg-shamrock"></i>Pourtier 2200/2 Low Voltage -
+                  Assembly
+                </p>
+                <p class="col-3">
+                  <i class="dot bg-shamrock"></i>Pourtier 2200/2 Low Voltage -
+                  Assembly
+                </p>
+              </div>
+
+              <hr />
+
+              <!-- Extrusion -->
+              <div class="row">
+                <h6 class="col-3">Extrusion</h6>
+                <p class="col-3">
+                  <i class="dot bg-atlantis"></i>Pourtier 2200/2 Low Voltage -
+                  Assembly
+                </p>
+                <p class="col-3">
+                  <i class="dot bg-atlantis"></i>Pourtier 2200/2 Low Voltage -
+                  Assembly
+                </p>
+                <p class="col-3">
+                  <i class="dot bg-atlantis"></i>Pourtier 2200/2 Low Voltage -
+                  Assembly
+                </p>
+              </div>
+
+              <hr />
+
+              <!-- Insulation -->
+              <div class="row">
+                <h6 class="col-3">Insulation</h6>
+                <div class="col-3">
+                  <p>
+                    <i class="dot bg-corn"></i>Pourtier 2200/2 Low Voltage -
+                    Assembly
+                  </p>
+                  <p>
+                    <i class="dot bg-corn"></i>Pourtier 2200/2 Low Voltage -
+                    Assembly
+                  </p>
+                </div>
+                <p class="col-3">
+                  <i class="dot bg-corn"></i>Pourtier 2200/2 Low Voltage -
+                  Assembly
+                </p>
+                <p class="col-3">
+                  <i class="dot bg-corn"></i>Pourtier 2200/2 Low Voltage -
+                  Assembly
+                </p>
+              </div>
+
+              <hr />
+
+              <!-- Insulation - Extrusion -->
+              <div class="row">
+                <h6 class="col-3">Insulation - Extrusion</h6>
+                <div class="col-3">
+                  <p>
+                    <i class="dot bg-corn"></i>Pourtier 2200/2 Low Voltage -
+                    Assembly
+                  </p>
+                  <p>
+                    <i class="dot bg-submarine"></i>Pourtier 2200/2 Low Voltage
+                    - Assembly
+                  </p>
+                </div>
+                <p class="col-3">
+                  <i class="dot bg-corn"></i>Pourtier 2200/2 Low Voltage -
+                  Assembly
+                </p>
+                <p class="col-3">
+                  <i class="dot bg-corn"></i>Pourtier 2200/2 Low Voltage -
+                  Assembly
+                </p>
+              </div>
+
+              <hr />
+
+              <!-- Armoring -->
+              <div class="row">
+                <h6 class="col-3">Lead</h6>
+                <div class="col-3">
+                  <p>
+                    <i class="dot bg-mulberry"></i>Pourtier 2200/2 Low Voltage -
+                    Assembly
+                  </p>
+                </div>
+                <p class="col-3">
+                  <i class="dot bg-mulberry"></i>Pourtier 2200/2 Low Voltage -
+                  Assembly
+                </p>
+                <p class="col-3">
+                  <i class="dot bg-mulberry"></i>Pourtier 2200/2 Low Voltage -
+                  Assembly
+                </p>
+              </div>
+
+              <hr />
+
+              <!-- Screening -->
+              <div class="row">
+                <h6 class="col-3">Screening</h6>
+                <div class="col-3">
+                  <p>
+                    <i class="dot bg-astronaut-blue"></i>Pourtier 2200/2 Low
+                    Voltage - Assembly
+                  </p>
+                </div>
+                <p class="col-3">
+                  <i class="dot bg-astronaut-blue"></i>Pourtier 2200/2 Low
+                  Voltage - Assembly
+                </p>
+                <p class="col-3">
+                  <i class="dot bg-astronaut-blue"></i>Pourtier 2200/2 Low
+                  Voltage - Assembly
+                </p>
+              </div>
+
+              <hr />
+
+              <!-- Stranding -->
+              <div class="row">
+                <h6 class="col-3">Stranding</h6>
+                <div class="col-3">
+                  <p>
+                    <i class="dot bg-ebony-clay"></i>Pourtier 2200/2 Low Voltage
+                    - Assembly
+                  </p>
+                </div>
+                <p class="col-3">
+                  <i class="dot bg-ebony-clay"></i>Pourtier 2200/2 Low Voltage -
+                  Assembly
+                </p>
+                <p class="col-3">
+                  <i class="dot bg-ebony-clay"></i>Pourtier 2200/2 Low Voltage -
+                  Assembly
+                </p>
+              </div>
+            </div>
+            <!-- End Activities -->
+          </div>
+          <!-- End Current Activity -->
+        </div>
+
+        <div class="col-12 col-md-3">
+          <div class="row m-0 box-shadow rounded-2 bg-white p-3">
+            <!-- Alerts -->
+            <div class="col-6 col-md-12">
+              <h6 class="txt-alert">
+                <div class="dot bg-alert"></div>
+                ALERTS
+              </h6>
+              <hr />
+              <div class="d-flex align-items-center fm-montserrat fw-medium">
+                <div class="col-3 text-center">
+                  <img src="../assets/resources.png" class="mr-3" />
+                </div>
+                <div class="col-9">
+                  <p class="mb-0">Confirm mass on machine</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="mb-0">id</p>
+                    <p class="mb-0 fw-bold">4017702</p>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="d-flex align-items-center fm-montserrat fw-medium">
+                <div class="col-3 text-center">
+                  <img src="../assets/resources.png" class="mr-3" />
+                </div>
+                <div class="col-9">
+                  <p class="mb-0">Machine stoppage</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="mb-0">id</p>
+                    <p class="mb-0 fw-bold">4017702</p>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="d-flex align-items-center fm-montserrat fw-medium">
+                <div class="col-3 text-center">
+                  <img src="../assets/load.png" class="mr-3" />
+                </div>
+                <div class="col-9">
+                  <p class="mb-0">Machine stopage</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="mb-0">id</p>
+                    <p class="mb-0 fw-bold">4017702</p>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="d-flex align-items-center fm-montserrat fw-medium">
+                <div class="col-3 text-center">
+                  <img src="../assets/performance.png" class="mr-3" />
+                </div>
+                <div class="col-9">
+                  <p class="mb-0">Low production yield count</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="mb-0">id</p>
+                    <p class="mb-0 fw-bold">4017702</p>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="d-flex align-items-center fm-montserrat fw-medium">
+                <div class="col-3 text-center">
+                  <img src="../assets/performance.png" class="mr-3" />
+                </div>
+                <div class="col-9">
+                  <p class="mb-0">Low production yield count</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="mb-0">id</p>
+                    <p class="mb-0 fw-bold">4017702</p>
+                  </div>
+                </div>
+              </div>
+              <hr />
+            </div>
+
+            <!-- Notifications -->
+            <div class="col-6 col-md-12">
+              <h6 class="txt-lightgreen">
+                <div class="dot bg-lightgreen"></div>
+                NOTIFICATION
+              </h6>
+              <hr />
+              <div class="d-flex align-items-center fm-montserrat fw-medium">
+                <div class="col-3 text-center">
+                  <img src="../assets/resources.png" class="mr-3" />
+                </div>
+                <div class="col-9">
+                  <p class="mb-0">Confirm mass on machine</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="mb-0">id</p>
+                    <p class="mb-0 fw-bold">4017702</p>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="d-flex align-items-center fm-montserrat fw-medium">
+                <div class="col-3 text-center">
+                  <img src="../assets/resources.png" class="mr-3" />
+                </div>
+                <div class="col-9">
+                  <p class="mb-0">Confirm mass on machine</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="mb-0">id</p>
+                    <p class="mb-0 fw-bold">4017702</p>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="d-flex align-items-center fm-montserrat fw-medium">
+                <div class="col-3 text-center">
+                  <img src="../assets/load.png" class="mr-3" />
+                </div>
+                <div class="col-9">
+                  <p class="mb-0">Machine stoppage</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="mb-0">id</p>
+                    <p class="mb-0 fw-bold">4017702</p>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="d-flex align-items-center fm-montserrat fw-medium">
+                <div class="col-3 text-center">
+                  <img src="../assets/load.png" class="mr-3" />
+                </div>
+                <div class="col-9">
+                  <p class="mb-0">Machine stopage</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="mb-0">id</p>
+                    <p class="mb-0 fw-bold">4017702</p>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="d-flex align-items-center fm-montserrat fw-medium">
+                <div class="col-3 text-center">
+                  <img src="../assets/performance.png" class="mr-3" />
+                </div>
+                <div class="col-9">
+                  <p class="mb-0">Low production yield count</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="mb-0">id</p>
+                    <p class="mb-0 fw-bold">4017702</p>
+                  </div>
+                </div>
+              </div>
+              <hr />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END CONTENT -->
     </div>
 
     <script src="../js/vendors/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="../js/script.js"></script>
   </body>
 </html>
