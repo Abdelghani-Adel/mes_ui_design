@@ -20,6 +20,15 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  font-size: clamp(10px, 14px, 0.8vw);
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 0.9rem;
 }
 
 button,
@@ -1002,7 +1011,7 @@ hr {
 }
 
 .nav-link i {
-  margin-left: 20%;
+  margin-left: 20px;
   width: 15%;
 }
 
@@ -1095,7 +1104,7 @@ hr {
 }
 
 .circle-progress .progress-value {
-  font-size: 24px;
+  font-size: 1.1rem;
   position: absolute;
   top: 50%;
   left: 50%;
