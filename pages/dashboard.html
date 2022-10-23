@@ -39,7 +39,7 @@
 
       <div class="d-flex">
         <!--  -->
-        <div class="d-flex align-items-center">
+        <div class="d-none d-md-flex align-items-center">
           <button class="btn bg-lightblue txt-blue dropdown-toggle">
             <i class="fa-solid fa-building mx-2"></i> Factory Name
           </button>
@@ -66,13 +66,15 @@
     </header>
     <!-- End Header -->
 
-    <div class="l-navbar bg-primary" id="nav-bar">
+    <div class="side-nav bg-primary" id="nav-bar">
       <nav class="nav">
         <div>
+          <!-- Nav Logo -->
           <a href="#" class="nav_logo">
             <img src="../assets/navIcon.svg" alt="" />
             <span class="nav_logo-name">MES</span>
           </a>
+          <!-- Nav List -->
           <div class="nav_list">
             <a href="#" class="nav_link active">
               <i class="bx bx-grid-alt nav_icon"></i>
@@ -100,6 +102,8 @@
             </a>
           </div>
         </div>
+
+        <!-- Sign out -->
         <div>
           <a href="#" class="nav_link">
             <i class="bx bx-cog nav_icon"></i>

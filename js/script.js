@@ -7,16 +7,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   // Show nav bar on clicking on toggle button
   toggle.addEventListener("click", () => {
-    nav.classList.toggle("show");
+    nav.classList.toggle("navbar-shown");
     toggle.classList.toggle("bx-x");
     bodypd.classList.toggle("body-pd");
-    headerpd.classList.toggle("body-pd");
+    headerpd.classList.toggle("header-shortened");
   });
 
   // Hide nav bar on clicking on content area
   content.addEventListener("click", () => {
-    if (nav.classList.contains("show")) {
-      nav.classList.remove("show");
+    if (nav.classList.contains("navbar-shown")) {
+      nav.classList.remove("navbar-shown");
       toggle.classList.remove("bx-x");
       bodypd.classList.remove("body-pd");
       headerpd.classList.remove("body-pd");
