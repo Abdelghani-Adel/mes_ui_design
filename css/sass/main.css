@@ -23,7 +23,6 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: clamp(10px, 14px, 0.8vw);
   position: relative;
-  transition: 0.5s;
 }
 
 h6 {
@@ -1070,11 +1069,18 @@ hr {
 .side-nav {
   position: fixed;
   top: 0;
-  left: -30%;
+  left: -50%;
   height: 100vh;
   padding: 0.5rem 1rem 0 0;
   transition: 0.5s;
   z-index: var(--z-fixed);
+}
+
+.navbar-shown {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  left: 0;
 }
 
 .nav {
@@ -1125,36 +1131,29 @@ hr {
 }
 
 .nav_icon {
-  font-size: 1.5rem;
-}
-
-.navbar-shown {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  left: 0;
+  font-size: 2rem;
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    padding-left: 4vw;
+  #content {
+    padding-left: 16vw;
   }
   .header {
-    padding-left: 4vw;
-  }
-  .header-shortened {
-    margin-left: 6vw;
+    padding-left: 16vw;
   }
   .side-nav {
-    width: 4vw;
+    width: 15vw;
     left: 0;
     padding: 1rem 1.5rem 0 0;
   }
+  .header-shortened {
+    padding-left: 12vw;
+  }
   .navbar-shown {
-    width: 10vw;
+    width: 12vw;
   }
   .body-pd {
-    padding-left: 10vw;
+    padding-left: 12vw;
   }
 }
 .circle-progress {

@@ -68,14 +68,19 @@
 .side-nav {
   position: fixed;
   top: 0;
-  left: -30%;
-  // width: var(--nav-width);
+  left: -50%;
   height: 100vh;
-  // background-color: var(--first-color);
   padding: 0.5rem 1rem 0 0;
   transition: 0.5s;
   z-index: var(--z-fixed);
 }
+
+.navbar-shown {
+  width: max-content;
+  // display: block;
+  left: 0;
+}
+
 .nav {
   height: 100%;
   display: flex;
@@ -91,6 +96,7 @@
   padding: 0.5rem 0 0.5rem 1.5rem;
 }
 .nav_logo {
+  // justify-content: center;
   margin-bottom: 2rem;
   color: var(--white-color);
   font-weight: 700;
@@ -118,37 +124,32 @@
   color: var(--white-color);
 }
 .nav_icon {
-  font-size: 1.5rem;
-}
-
-.navbar-shown {
-  width: max-content;
-  left: 0;
+  font-size: 2rem;
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    // margin-top: 10vh;
-    padding-left: 4vw;
+  #content {
+    padding-left: 16vw;
   }
 
   .header {
-    padding-left: 4vw;
-  }
-
-  .header-shortened {
-    margin-left: 6vw;
+    padding-left: 16vw;
   }
 
   .side-nav {
-    width: 4vw;
+    width: 15vw;
     left: 0;
     padding: 1rem 1.5rem 0 0;
   }
+
+  .header-shortened {
+    padding-left: 12vw;
+  }
+
   .navbar-shown {
-    width: 10vw;
+    width: 12vw;
   }
   .body-pd {
-    padding-left: 10vw;
+    padding-left: 12vw;
   }
 }

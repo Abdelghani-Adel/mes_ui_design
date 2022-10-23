@@ -23,18 +23,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   });
 
-  // showNavbar("nav-toggle", "nav-bar", "body-pd", "header");
-
   /*===== LINK ACTIVE =====*/
-  const linkColor = document.querySelectorAll(".nav_link");
+  const navLinks = document.querySelectorAll(".nav_link");
 
-  function colorLink() {
-    if (linkColor) {
-      linkColor.forEach((l) => l.classList.remove("active"));
+  function changeActiveState() {
+    if (navLinks) {
+      navLinks.forEach((link) => link.classList.remove("active"));
       this.classList.add("active");
     }
   }
-  linkColor.forEach((l) => l.addEventListener("click", colorLink));
-
-  // Your code to run since DOM is loaded and ready
+  navLinks.forEach((link) => link.addEventListener("click", changeActiveState));
 });
