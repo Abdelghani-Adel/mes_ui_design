@@ -181,4 +181,20 @@ $transition: 2s;
   100% {
     width: 75%;
   }
-} ;
+}
+
+.progress-bar-vertical {
+  width: 10px;
+  margin-top: auto;
+  // min-height: 100px;
+  // margin-right: 20px;
+  // float: left;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.progress-bar-vertical .progress-bar {
+  width: 100%;
+  height: 0;
+}

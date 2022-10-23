@@ -1144,6 +1144,7 @@ hr {
 
 @media screen and (min-width: 768px) {
   #content {
+    margin-top: 8vh;
     padding-left: 16vw;
   }
   .header {
@@ -1398,6 +1399,18 @@ hr {
     width: 75%;
   }
 }
+.progress-bar-vertical {
+  width: 10px;
+  margin-top: auto;
+  display: flex;
+  align-items: flex-end;
+}
+
+.progress-bar-vertical .progress-bar {
+  width: 100%;
+  height: 0;
+}
+
 .rounded {
   border-radius: 1em;
 }
