@@ -1458,6 +1458,8 @@ hr {
   font-family: "Montserrat", sans-serif;
   color: #707070;
   text-align: center;
+  border-collapse: separate;
+  border-spacing: 0 10px;
 }
 
 .table tr {
