@@ -72,6 +72,14 @@ hr {
   font-size: 0.4rem;
 }
 
+.fs-small-1 {
+  font-size: 0.6rem;
+}
+
+.fs-small-2 {
+  font-size: 0.8rem;
+}
+
 .fm-roboto {
   font-family: "Roboto", sans-serif;
 }
@@ -1146,7 +1154,7 @@ hr {
 
 @media screen and (min-width: 768px) {
   #content {
-    margin-top: 8vh;
+    margin-top: 10vh;
     padding-left: 16vw;
   }
   .header {
@@ -1166,6 +1174,11 @@ hr {
   margin: 0 auto;
   box-shadow: none;
   position: relative;
+}
+
+.circle-progress.circle-2 {
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 .circle-progress:after {

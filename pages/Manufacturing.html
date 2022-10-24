@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Grid System -->
+    <link rel="stylesheet" href="../css/vendors/bootstrap.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../css/sass/main.css" />
+    <title>Dashboard</title>
+  </head>
+  <body id="body-pd" class="bg-white-3">
+    <!-- Start Header -->
+    <header class="header box-shadow bg-white" id="header">
+      <!-- Toggle Button -->
+      <div class="nav-toggle txt-primary ms-3 mr-4 d-md-none">
+        <i class="bx bx-menu" id="nav-toggle"></i>
+      </div>
+
+      <div class="d-flex col-md-12">
+        <!--  -->
+        <div class="d-none d-md-flex align-items-center">
+          <button class="btn bg-lightblue txt-blue dropdown-toggle">
+            <i class="fa-solid fa-building mx-2"></i> Factory Name
+          </button>
+
+          <button class="btn bg-lightblue mx-3">
+            <img src="../assets/function.png" alt="" />
+          </button>
+
+          <div>
+            <img src="../assets/load.png" alt="" />
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="d-flex align-items-center ms-auto">
+          <button class="btn bg-lightblue txt-blue">Today</button>
+          <button class="btn txt-gray">Yesterday</button>
+          <button class="btn txt-gray">Lastweek</button>
+          <button class="btn txt-gray fs-5">
+            <i class="fa-regular fa-calendar"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Navbar -->
+    <div class="side-nav bg-primary" id="nav-bar">
+      <nav class="nav">
+        <div>
+          <!-- Nav Logo -->
+          <a href="#" class="nav_logo">
+            <img src="../assets/navIcon.svg" alt="" />
+            <span class="nav_logo-name">MES</span>
+          </a>
+          <!-- Nav List -->
+          <div class="nav_list">
+            <a href="./dashboard.html" class="nav_link">
+              <i class="bx bx-grid-alt nav_icon"></i>
+              <span class="nav_name">Dashboard</span>
+            </a>
+            <a href="./resources.html" class="nav_link">
+              <i class="bx bx-add-to-queue nav_icon"></i>
+              <span class="nav_name">Resources</span>
+            </a>
+            <a href="./Manufacturing.html" class="nav_link active">
+              <i class="bx bx-buildings nav_icon"></i>
+              <span class="nav_name">Manufacturing</span>
+            </a>
+            <a href="#" class="nav_link">
+              <i class="bx bx-wrench nav_icon"></i>
+              <span class="nav_name">Machines</span>
+            </a>
+            <a href="#" class="nav_link">
+              <i class="bx bx-analyse nav_icon"></i>
+              <span class="nav_name">Planning</span>
+            </a>
+            <a href="#" class="nav_link">
+              <i class="bx bx-error nav_icon"></i>
+              <span class="nav_name">Issues</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Sign out -->
+        <div>
+          <a href="#" class="nav_link">
+            <i class="bx bx-cog nav_icon"></i>
+            <span class="nav_name">Settings</span>
+          </a>
+          <a href="../index.html" class="nav_link">
+            <i class="bx bx-log-out nav_icon"></i>
+            <span class="nav_name">SignOut</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+    <!-- End Nav bar -->
+
+    <div class="container-fluid" id="content">
+      <!-- START CONTENT -->
+      <div class="row g-3">
+        <!-- Title -->
+        <div class="col-4">
+          <h3 class="mb-5">Manufacturing \ Job Orders \ Job Order ID</h3>
+        </div>
+
+        <!-- Add New Button -->
+        <div class="col-5 d-flex justify-content-end align-items-baseline">
+          <button class="btn btn-primary px-5 py-2 box-shadow rounded-2">
+            <i class="bx bx-chevron-down"></i> Job Order
+          </button>
+        </div>
+
+        <!-- Search Form -->
+        <div class="col-3">
+          <div class="form search-form">
+            <i class="bx bx-search"></i>
+            <input
+              type="text"
+              class="form-control form-input search-form-input"
+              placeholder="Search by load name"
+            />
+            <span class="left-pan"><i class="fa fa-microphone"></i></span>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-9">
+          <div class="row g-3 flex-column flex-md-row mb-3">
+            <!-- Start Total Material Consumption -->
+            <div class="col-12 col-md-3 col-xxl-3">
+              <div class="box-shadow rounded-2 bg-white p-3 h-100">
+                <!--  -->
+                <h6 class="d-flex align-items-center">
+                  <img src="../assets/product.png" class="mr-3" /> Total
+                  Production
+                </h6>
+                <!--  -->
+                <hr />
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <p class="mb-0 fs-5 fm-montserrat fw-medium">5,000 km</p>
+                    <p class="txt-blue">Actual Consumption</p>
+                  </div>
+                  <div>
+                    <p class="mb-0 fs-5 fm-montserrat fw-medium">7,000 km</p>
+                    <p class="txt-gray">Planned Consumption</p>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="d-flex align-items-center justify-content-between">
+                  <!-- <div class="progress w-75 me-2" style="height: 10px">
+                    <div class="progress-bar w-75"></div>
+                  </div> -->
+
+                  <div class="progress-inline">
+                    <div class="value"></div>
+                  </div>
+                  <p class="fs-4 mb-0">75%</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Total Material Consumption -->
+
+            <!-- Start Performance Indicator KPI -->
+            <div class="col-12 col-md-6">
+              <div class="box-shadow rounded-2 bg-white p-3 h-100">
+                <!--  -->
+                <h6 class="d-flex align-items-center">
+                  <img src="../assets/performance.png" class="mr-3" />
+                  Performance Indicator KPI
+                </h6>
+
+                <!--  -->
+                <hr />
+                <!-- Circle Progress Bars -->
+                <div
+                  class="row g-3 row-cols-3 justify-content-between text-center"
+                >
+                  <!-- Availability -->
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div class="circle-progress circle-2 blue mb-2">
+                      <span class="progress-left progress-76">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right progress-76">
+                        <span class="progress-bar"></span>
+                      </span>
+                    </div>
+                    <div>
+                      <h6>Availability</h6>
+                      <h6>76%</h6>
+                    </div>
+                  </div>
+                  <!-- Performance -->
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div class="circle-progress circle-2 blue mb-2">
+                      <span class="progress-left progress-68">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right progress-68">
+                        <span class="progress-bar"></span>
+                      </span>
+                    </div>
+                    <div>
+                      <h6>Performance</h6>
+                      <h6>68%</h6>
+                    </div>
+                  </div>
+                  <!-- Quality -->
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div class="circle-progress circle-2 blue mb-2">
+                      <span class="progress-right progress-25">
+                        <span class="progress-bar"></span>
+                      </span>
+                    </div>
+                    <div>
+                      <h6>Quality</h6>
+                      <h6>25%</h6>
+                    </div>
+                  </div>
+
+                  <div
+                    class="col-12 d-flex align-items-center justify-content-between"
+                  >
+                    <p class="fs-4 mb-0">EEO</p>
+                    <div class="progress-inline">
+                      <div class="value"></div>
+                    </div>
+                    <p class="fs-4 mb-0">EEO</p>
+                  </div>
+                </div>
+
+                <!-- END -->
+              </div>
+            </div>
+            <!-- End Performance Indicator KPI -->
+
+            <!-- Start Material Consumption -->
+            <div class="col-12 col-md-3 col-xxl-3">
+              <div class="box-shadow rounded-2 bg-white p-3 h-100">
+                <!--  -->
+                <h6 class="d-flex align-items-center">
+                  <img src="../assets/material.png" class="mr-3" /> Material
+                  Consumption
+                </h6>
+                <!--  -->
+                <hr />
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <p class="mb-0 fs-5 fm-montserrat fw-medium">5,000 km</p>
+                    <p class="txt-blue">Actual Consumption</p>
+                  </div>
+                  <div>
+                    <p class="mb-0 fs-5 fm-montserrat fw-medium">7,000 km</p>
+                    <p class="txt-gray">Planned Consumption</p>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="progress-inline">
+                    <div class="value"></div>
+                  </div>
+                  <p class="fs-4 mb-0">75%</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Material Consumption -->
+          </div>
+
+          <!-- Start Job Orders -->
+          <div class="box-shadow rounded-2 bg-white p-3 mb-3">
+            <!-- Start Header -->
+            <div class="d-flex mb-0 pb-0">
+              <h6 class="d-flex align-items-center w-25">
+                <img src="../assets/jobOrder.png" class="mr-2" />Job Orders
+              </h6>
+
+              <!-- Buttons -->
+              <div class="d-flex ms-auto">
+                <!-- Material List Button -->
+                <button
+                  class="bg-white border-0 border-bottom border-primary txt-blue d-flex align-items-center"
+                >
+                  <i class="bx bx-list-ul fs-2 mr-2"></i>List
+                </button>
+                <!-- Material Profile Button -->
+                <button
+                  class="bg-white border-0 txt-gray d-flex align-items-center"
+                >
+                  <i class="bx bx-stats fs-2 mr-2"></i>Chart
+                </button>
+              </div>
+            </div>
+            <hr class="mt-0 pt-0" />
+            <!-- End Header -->
+
+            <!-- Start Job Orders -->
+            <div class="p-4 mt-3">
+              <!-- Search Bar -->
+
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Job Order ID</th>
+                    <th scope="col">Starting Date</th>
+                    <th scope="col">State</th>
+                    <th scope="col">Clients</th>
+                    <th scope="col">Sales</th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Route ID</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>938840</td>
+                    <td>02-02-2022</td>
+                    <td><i class="bx bx-pulse txt-primary"></i></td>
+                    <td>Mohamed Ahmed</td>
+                    <td>Mohamed Ahmed</td>
+                    <td>30 tones material</td>
+                    <td>456677</td>
+                    <td><img src="../assets/material.png" alt="" /></td>
+                    <td><img src="../assets/function.png" alt="" /></td>
+                    <td><img src="../assets/product.png" alt="" /></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Function</th>
+                    <th scope="col">Starting Date</th>
+                    <th scope="col">Material</th>
+                    <th scope="col">
+                      <p class="mb-0">Consumption</p>
+                      <p class="mb-0 txt-gray">Actual | Planned</p>
+                    </th>
+                    <th scope="col">Product</th>
+                    <th scope="col">
+                      <p class="mb-0">Consumption</p>
+                      <p class="mb-0 txt-gray">Actual | Planned</p>
+                    </th>
+                    <th scope="col">Worker</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><i class="dot bg-tapestry"></i> Function Name</td>
+                    <td>02-02-2022</td>
+                    <td>Material Name</td>
+                    <td>10kg | 10 kg</td>
+                    <td>Product Name</td>
+                    <td>10kg | 10kg</td>
+                    <td>Mohamed Ahmed</td>
+                  </tr>
+                  <tr>
+                    <td><i class="dot bg-tapestry"></i> Function Name</td>
+                    <td>02-02-2022</td>
+                    <td>Material Name</td>
+                    <td>10kg | 10 kg</td>
+                    <td>Product Name</td>
+                    <td>10kg | 10kg</td>
+                    <td>Mohamed Ahmed</td>
+                  </tr>
+                  <tr>
+                    <td><i class="dot bg-tapestry"></i> Function Name</td>
+                    <td>02-02-2022</td>
+                    <td>Material Name</td>
+                    <td>10kg | 10 kg</td>
+                    <td>Product Name</td>
+                    <td>10kg | 10kg</td>
+                    <td>Mohamed Ahmed</td>
+                  </tr>
+                  <tr>
+                    <td><i class="dot bg-tapestry"></i> Function Name</td>
+                    <td>02-02-2022</td>
+                    <td>Material Name</td>
+                    <td>10kg | 10 kg</td>
+                    <td>Product Name</td>
+                    <td>10kg | 10kg</td>
+                    <td>Mohamed Ahmed</td>
+                  </tr>
+                  <tr>
+                    <td><i class="dot bg-tapestry"></i> Function Name</td>
+                    <td>02-02-2022</td>
+                    <td>Material Name</td>
+                    <td>10kg | 10 kg</td>
+                    <td>Product Name</td>
+                    <td>10kg | 10kg</td>
+                    <td>Mohamed Ahmed</td>
+                  </tr>
+                  <tr>
+                    <td><i class="dot bg-tapestry"></i> Function Name</td>
+                    <td>02-02-2022</td>
+                    <td>Material Name</td>
+                    <td>10kg | 10 kg</td>
+                    <td>Product Name</td>
+                    <td>10kg | 10kg</td>
+                    <td>Mohamed Ahmed</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- End Job Orders -->
+          </div>
+          <!-- End Job Orders -->
+        </div>
+
+        <!-- Alerts | Top 5 -->
+        <div class="col-12 col-md-3">
+          <div class="row m-0">
+            <!-- Start Alerts -->
+            <div class="col-6 col-md-12 mb-3 box-shadow rounded-2 bg-white p-3">
+              <h6 class="txt-alert">
+                <div class="dot bg-alert"></div>
+                ALERTS
+              </h6>
+              <hr />
+              <!-- alert -->
+              <div class="d-flex align-items-center fm-montserrat fw-medium">
+                <div class="col-3 text-center">
+                  <img src="../assets/resources.png" class="mr-3" />
+                </div>
+                <div class="col-9">
+                  <p class="mb-0">Confirm mass on machine</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="mb-0">id</p>
+                    <p class="mb-0 fw-bold">4017702</p>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <!-- alert -->
+              <div class="d-flex align-items-center fm-montserrat fw-medium">
+                <div class="col-3 text-center">
+                  <img src="../assets/resources.png" class="mr-3" />
+                </div>
+                <div class="col-9">
+                  <p class="mb-0">Machine stoppage</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="mb-0">id</p>
+                    <p class="mb-0 fw-bold">4017702</p>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <!-- alert -->
+              <div class="d-flex align-items-center fm-montserrat fw-medium">
+                <div class="col-3 text-center">
+                  <img src="../assets/load.png" class="mr-3" />
+                </div>
+                <div class="col-9">
+                  <p class="mb-0">Machine stopage</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="mb-0">id</p>
+                    <p class="mb-0 fw-bold">4017702</p>
+                  </div>
+                </div>
+              </div>
+              <hr />
+            </div>
+            <!-- End Alerts -->
+
+            <!-- Start Top 5 / Leasts -->
+            <div class="col-6 col-md-12 mb-4 box-shadow rounded-2 bg-white p-3">
+              <h6 class="d-flex align-items-center txt-dark">
+                <img src="../assets/function.png" class="mr-2" /> Job Orderp
+                Processes
+              </h6>
+
+              <hr />
+
+              <div class="row">
+                <table class="table table-sm table-borderless text-start">
+                  <thead>
+                    <tr class="txt-dark">
+                      <th scope="col"></th>
+                      <th scope="col">Planned</th>
+                      <th scope="col">Actual</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Group 1 -->
+                    <tr>
+                      <td class="fw-bolder txt-dark">
+                        <i class="dot bg-alert fs-5"></i> Function Name
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr class="fs-small-2">
+                      <td class="d-flex fw-bold">
+                        <img class="mr-2" src="../assets/material.png" />
+                        Material Name
+                      </td>
+                      <td>50 KG</td>
+                      <td class="fw-bold">52 KG</td>
+                    </tr>
+                    <tr class="fs-small-2">
+                      <td class="d-flex fw-bold">
+                        <img class="mr-2" src="../assets/product.png" /> Product
+                        Name
+                      </td>
+                      <td>30 KG</td>
+                      <td class="fw-bold">32 KG</td>
+                    </tr>
+                    <tr class="fs-small-2">
+                      <td class="d-flex fw-bold">
+                        <img class="mr-2" src="../assets/activity.png" /> Scrap
+                        Name
+                      </td>
+                      <td>3 KG</td>
+                      <td class="fw-bold">2 KG</td>
+                    </tr>
+
+                    <!-- Group 2 -->
+                    <tr>
+                      <td class="fw-bolder txt-dark">
+                        <i class="dot bg-shamrock fs-5"></i> Function Name
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr class="fs-small-2">
+                      <td class="d-flex fw-bold">
+                        <img class="mr-2" src="../assets/material.png" />
+                        Material Name
+                      </td>
+                      <td>50 KG</td>
+                      <td class="fw-bold">52 KG</td>
+                    </tr>
+                    <tr class="fs-small-2">
+                      <td class="d-flex fw-bold">
+                        <img class="mr-2" src="../assets/product.png" /> Product
+                        Name
+                      </td>
+                      <td>30 KG</td>
+                      <td class="fw-bold">32 KG</td>
+                    </tr>
+                    <tr class="fs-small-2">
+                      <td class="d-flex fw-bold">
+                        <img class="mr-2" src="../assets/activity.png" /> Scrap
+                        Name
+                      </td>
+                      <td>3 KG</td>
+                      <td class="fw-bold">2 KG</td>
+                    </tr>
+                    <!-- End Group -->
+
+                    <!-- Group 3 -->
+                    <tr>
+                      <td class="fw-bolder txt-dark">
+                        <i class="dot bg-shamrock fs-5"></i> Function Name
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr class="fs-small-2">
+                      <td class="d-flex fw-bold">
+                        <img class="mr-2" src="../assets/material.png" />
+                        Material Name
+                      </td>
+                      <td>50 KG</td>
+                      <td class="fw-bold">52 KG</td>
+                    </tr>
+                    <tr class="fs-small-2">
+                      <td class="d-flex fw-bold">
+                        <img class="mr-2" src="../assets/product.png" /> Product
+                        Name
+                      </td>
+                      <td>30 KG</td>
+                      <td class="fw-bold">32 KG</td>
+                    </tr>
+                    <tr class="fs-small-2">
+                      <td class="d-flex fw-bold">
+                        <img class="mr-2" src="../assets/activity.png" /> Scrap
+                        Name
+                      </td>
+                      <td>3 KG</td>
+                      <td class="fw-bold">2 KG</td>
+                    </tr>
+                    <!-- End Group -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- End Top 5 / Leasts -->
+          </div>
+        </div>
+      </div>
+      <!-- END CONTENT -->
+    </div>
+
+    <script src="../js/vendors/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
