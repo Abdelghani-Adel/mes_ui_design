@@ -1,0 +1,28 @@
+.first-color {
+  border-radius: 30% 30% 0 0;
+}
+.last-color {
+  border-radius: 0 0 30% 30%;
+}
+.color {
+  width: 20px;
+  height: 20px;
+  //   background: #000;
+}
+
+$colors: (
+  "1": #c53140,
+  "2": #961f2b,
+  "3": #5c121a,
+  "4": #58050d,
+  "5": #003f5c,
+  "6": #09618a,
+  "7": #1b88bb,
+  "8": #20aef0,
+);
+
+@each $color, $value in $colors {
+  .bg-#{$color} {
+    background-color: $value;
+  }
+}
