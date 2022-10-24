@@ -69,7 +69,7 @@ hr {
 }
 
 .fs-small {
-  font-size: 0.7rem;
+  font-size: 0.4rem;
 }
 
 .fm-roboto {
@@ -1507,6 +1507,18 @@ hr {
 
 .bg-8 {
   background-color: #20aef0;
+}
+
+.small-id {
+  display: flex;
+  justify-content: space-between;
+  color: #707070;
+  font-size: 0.7rem;
+}
+
+.small-id > * {
+  margin: 0;
+  padding: 0;
 }
 
 .rounded {

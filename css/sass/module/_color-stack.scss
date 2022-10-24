@@ -7,7 +7,6 @@
 .color {
   width: 20px;
   height: 20px;
-  //   background: #000;
 }
 
 $colors: (
@@ -25,4 +24,15 @@ $colors: (
   .bg-#{$color} {
     background-color: $value;
   }
+}
+
+.small-id {
+  display: flex;
+  justify-content: space-between;
+  color: #707070;
+  font-size: 0.7rem;
+}
+.small-id > * {
+  margin: 0;
+  padding: 0;
 }
