@@ -1652,4 +1652,12 @@ hr {
   border-radius: 50%;
   display: inline-block;
   margin-right: 0.5em;
+}
+
+.square {
+  height: 0.6em;
+  width: 0.6em;
+  border-radius: 20%;
+  display: inline-block;
+  margin-right: 0.5em;
 }/*# sourceMappingURL=main.css.map */

@@ -123,12 +123,12 @@
       <!-- START CONTENT -->
       <div class="row g-3">
         <!-- Title -->
-        <div class="col-4">
+        <div class="col-6 col-md-3">
           <h3 class="mb-5">Machines \ Information</h3>
         </div>
 
         <!-- Add New Button -->
-        <div class="col-5 d-flex justify-content-end align-items-baseline">
+        <div class="col-6 d-flex justify-content-end align-items-baseline">
           <button class="btn btn-primary px-5 py-2 box-shadow rounded-2">
             <i class="bx bx-info-circle"></i> Vew Properties
           </button>
@@ -147,8 +147,9 @@
           </div>
         </div>
 
+        <!-- Machine IDs -->
         <div class="col-12 col-md-9">
-          <div class="row gx-3 gy-5 row-cols-3">
+          <div class="row gx-3 gy-5 row-cols-1 row-cols-md-2 row-cols-lg-3">
             <!-- Machine ID -->
             <div class="col">
               <div class="box-shadow rounded-2 bg-white p-3">
@@ -926,193 +927,120 @@
           </div>
         </div>
 
-        <!-- Alerts | Top 5 -->
+        <!-- Layers | Options -->
         <div class="col-12 col-md-3">
           <div class="row m-0">
-            <!-- Start Alerts -->
-            <div class="col-6 col-md-12 mb-3 box-shadow rounded-2 bg-white p-3">
-              <h6 class="txt-alert">
-                <div class="dot bg-alert"></div>
-                ALERTS
+            <!-- Start Layers -->
+            <div class="col-12 mb-3 box-shadow rounded-2 bg-white p-3">
+              <h6 class="txt-dark">
+                <i class="bx bx-layer"></i>
+                Layers
               </h6>
               <hr />
-              <!-- alert -->
-              <div class="d-flex align-items-center fm-montserrat fw-medium">
-                <div class="col-3 text-center">
-                  <img src="../assets/resources.png" class="mr-3" />
-                </div>
-                <div class="col-9">
-                  <p class="mb-0">Confirm mass on machine</p>
-                  <div class="d-flex justify-content-between">
-                    <p class="mb-0">id</p>
-                    <p class="mb-0 fw-bold">4017702</p>
-                  </div>
-                </div>
-              </div>
-              <hr />
-              <!-- alert -->
-              <div class="d-flex align-items-center fm-montserrat fw-medium">
-                <div class="col-3 text-center">
-                  <img src="../assets/resources.png" class="mr-3" />
-                </div>
-                <div class="col-9">
-                  <p class="mb-0">Machine stoppage</p>
-                  <div class="d-flex justify-content-between">
-                    <p class="mb-0">id</p>
-                    <p class="mb-0 fw-bold">4017702</p>
-                  </div>
-                </div>
-              </div>
-              <hr />
-              <!-- alert -->
-              <div class="d-flex align-items-center fm-montserrat fw-medium">
-                <div class="col-3 text-center">
-                  <img src="../assets/load.png" class="mr-3" />
-                </div>
-                <div class="col-9">
-                  <p class="mb-0">Machine stopage</p>
-                  <div class="d-flex justify-content-between">
-                    <p class="mb-0">id</p>
-                    <p class="mb-0 fw-bold">4017702</p>
-                  </div>
-                </div>
-              </div>
-              <hr />
-            </div>
-            <!-- End Alerts -->
 
-            <!-- Start Top 5 / Leasts -->
-            <div class="col-6 col-md-12 mb-4 box-shadow rounded-2 bg-white p-3">
+              <!-- Dropdown Job Order -->
+              <div class="dropdown mt-3 mb-2">
+                <button
+                  class="btn txt-gray border-bottom w-100 d-flex justify-content-between"
+                  type="button"
+                >
+                  Job Order <span class="bx bx-chevron-down"></span>
+                </button>
+              </div>
+              <!-- Dropdown Route -->
+              <div class="dropdown mb-4">
+                <button
+                  class="btn txt-gray border-bottom w-100 d-flex justify-content-between"
+                  type="button"
+                >
+                  Route <span class="bx bx-chevron-down"></span>
+                </button>
+              </div>
+
+              <!-- Button Group -->
+              <div class="box-shadow p-1 mb-4">
+                <div class="btn-group w-100">
+                  <button class="btn btn-primary rounded-2">FUNCTION</button>
+                  <button class="btn txt-gray">MATERIAL</button>
+                  <button class="btn txt-gray">PRODUCT</button>
+                </div>
+              </div>
+
+              <!-- Functions -->
+              <div class="row g-4 row-cols-2">
+                <div class="col d-flex align-items-center">
+                  <i class="square fs-4 bg-astronaut-blue"></i> Function
+                </div>
+                <div class="col d-flex align-items-center">
+                  <i class="square fs-4 bg-astronaut-blue"></i> Function
+                </div>
+                <div class="col d-flex align-items-center">
+                  <i class="square fs-4 bg-astronaut-blue"></i> Function
+                </div>
+                <div class="col d-flex align-items-center">
+                  <i class="square fs-4 bg-astronaut-blue"></i> Function
+                </div>
+                <div class="col d-flex align-items-center">
+                  <i class="square fs-4 bg-astronaut-blue"></i> Function
+                </div>
+                <div class="col d-flex align-items-center">
+                  <i class="square fs-4 bg-astronaut-blue"></i> Function
+                </div>
+                <div class="col d-flex align-items-center">
+                  <i class="square fs-4 bg-astronaut-blue"></i> Function
+                </div>
+                <div class="col d-flex align-items-center">
+                  <i class="square fs-4 bg-astronaut-blue"></i> Function
+                </div>
+                <div class="col d-flex align-items-center">
+                  <i class="square fs-4 bg-astronaut-blue"></i> Function
+                </div>
+                <div class="col d-flex align-items-center">
+                  <i class="square fs-4 bg-astronaut-blue"></i> Function
+                </div>
+              </div>
+            </div>
+            <!-- End Layers -->
+
+            <!-- Start Options -->
+            <div class="col-12 mb-4 box-shadow rounded-2 bg-white p-3">
               <h6 class="d-flex align-items-center txt-dark">
-                <img src="../assets/function.png" class="mr-2" /> Job Orderp
-                Processes
+                <img src="../assets/performance.png" class="mr-2" /> Options
               </h6>
 
               <hr />
 
-              <div class="row">
-                <table class="table table-sm table-borderless text-start">
-                  <thead>
-                    <tr class="txt-dark">
-                      <th scope="col"></th>
-                      <th scope="col">Planned</th>
-                      <th scope="col">Actual</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- Group 1 -->
-                    <tr>
-                      <td class="fw-bolder txt-dark">
-                        <i class="dot bg-alert fs-5"></i> Function Name
-                      </td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr class="fs-small-2">
-                      <td class="d-flex fw-bold">
-                        <img class="mr-2" src="../assets/material.png" />
-                        Material Name
-                      </td>
-                      <td>50 KG</td>
-                      <td class="fw-bold">52 KG</td>
-                    </tr>
-                    <tr class="fs-small-2">
-                      <td class="d-flex fw-bold">
-                        <img class="mr-2" src="../assets/product.png" /> Product
-                        Name
-                      </td>
-                      <td>30 KG</td>
-                      <td class="fw-bold">32 KG</td>
-                    </tr>
-                    <tr class="fs-small-2">
-                      <td class="d-flex fw-bold">
-                        <img class="mr-2" src="../assets/activity.png" /> Scrap
-                        Name
-                      </td>
-                      <td>3 KG</td>
-                      <td class="fw-bold">2 KG</td>
-                    </tr>
+              <div class="row my-3">
+                <div class="col d-flex align-items-center">
+                  <i class="square fs-4 bg-mantis"></i> Active
+                </div>
+                <div class="col d-flex align-items-center">
+                  <i class="square fs-4 bg-alert"></i> Inactive
+                </div>
+              </div>
 
-                    <!-- Group 2 -->
-                    <tr>
-                      <td class="fw-bolder txt-dark">
-                        <i class="dot bg-shamrock fs-5"></i> Function Name
-                      </td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr class="fs-small-2">
-                      <td class="d-flex fw-bold">
-                        <img class="mr-2" src="../assets/material.png" />
-                        Material Name
-                      </td>
-                      <td>50 KG</td>
-                      <td class="fw-bold">52 KG</td>
-                    </tr>
-                    <tr class="fs-small-2">
-                      <td class="d-flex fw-bold">
-                        <img class="mr-2" src="../assets/product.png" /> Product
-                        Name
-                      </td>
-                      <td>30 KG</td>
-                      <td class="fw-bold">32 KG</td>
-                    </tr>
-                    <tr class="fs-small-2">
-                      <td class="d-flex fw-bold">
-                        <img class="mr-2" src="../assets/activity.png" /> Scrap
-                        Name
-                      </td>
-                      <td>3 KG</td>
-                      <td class="fw-bold">2 KG</td>
-                    </tr>
-                    <!-- End Group -->
-
-                    <!-- Group 3 -->
-                    <tr>
-                      <td class="fw-bolder txt-dark">
-                        <i class="dot bg-shamrock fs-5"></i> Function Name
-                      </td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr class="fs-small-2">
-                      <td class="d-flex fw-bold">
-                        <img class="mr-2" src="../assets/material.png" />
-                        Material Name
-                      </td>
-                      <td>50 KG</td>
-                      <td class="fw-bold">52 KG</td>
-                    </tr>
-                    <tr class="fs-small-2">
-                      <td class="d-flex fw-bold">
-                        <img class="mr-2" src="../assets/product.png" /> Product
-                        Name
-                      </td>
-                      <td>30 KG</td>
-                      <td class="fw-bold">32 KG</td>
-                    </tr>
-                    <tr class="fs-small-2">
-                      <td class="d-flex fw-bold">
-                        <img class="mr-2" src="../assets/activity.png" /> Scrap
-                        Name
-                      </td>
-                      <td>3 KG</td>
-                      <td class="fw-bold">2 KG</td>
-                    </tr>
-                    <!-- End Group -->
-                  </tbody>
-                </table>
+              <div class="w-100 mb-3 fw-bold fs-5">
+                <p class="mb-2">Material Consumption</p>
+                <input type="range" min="0" max="50" value="5" class="w-100" />
+              </div>
+              <div class="w-100 mb-3 fw-bold fs-5">
+                <p class="mb-2">Energy Consumption</p>
+                <input type="range" min="0" max="50" value="25" class="w-100" />
+              </div>
+              <div class="w-100 mb-3 fw-bold fs-5">
+                <p class="mb-2">Production</p>
+                <input type="range" min="0" max="50" value="15" class="w-100" />
               </div>
             </div>
-            <!-- End Top 5 / Leasts -->
+            <!-- End Options -->
           </div>
         </div>
       </div>
       <!-- END CONTENT -->
     </div>
 
-    <script src="../js/vendors/bootstrap.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../js/vendors/bootstrap.js"></script>
     <script src="../js/script.js"></script>
   </body>
 </html>
