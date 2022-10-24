@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Grid System -->
+    <link rel="stylesheet" href="../css/vendors/bootstrap.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../css/sass/main.css" />
+    <title>Dashboard</title>
+  </head>
+  <body id="body-pd" class="bg-white-3">
+    <!-- Start Header -->
+    <header class="header box-shadow bg-white" id="header">
+      <!-- Toggle Button -->
+      <div class="nav-toggle txt-primary ms-3 mr-4 d-md-none">
+        <i class="bx bx-menu" id="nav-toggle"></i>
+      </div>
+
+      <div class="d-flex col-md-12">
+        <!--  -->
+        <div class="d-none d-md-flex align-items-center">
+          <button class="btn bg-lightblue txt-blue dropdown-toggle">
+            <i class="fa-solid fa-building mx-2"></i> Factory Name
+          </button>
+
+          <button class="btn bg-lightblue mx-3">
+            <img src="../assets/function.png" alt="" />
+          </button>
+
+          <div>
+            <img src="../assets/load.png" alt="" />
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="d-flex align-items-center ms-auto">
+          <button class="btn bg-lightblue txt-blue">Today</button>
+          <button class="btn txt-gray">Yesterday</button>
+          <button class="btn txt-gray">Lastweek</button>
+          <button class="btn txt-gray fs-5">
+            <i class="fa-regular fa-calendar"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Navbar -->
+    <div class="side-nav bg-primary" id="nav-bar">
+      <nav class="nav">
+        <div>
+          <!-- Nav Logo -->
+          <a href="#" class="nav_logo">
+            <img src="../assets/navIcon.svg" alt="" />
+            <span class="nav_logo-name">MES</span>
+          </a>
+          <!-- Nav List -->
+          <div class="nav_list">
+            <a href="./dashboard.html" class="nav_link">
+              <i class="bx bx-grid-alt nav_icon"></i>
+              <span class="nav_name">Dashboard</span>
+            </a>
+            <a href="./resources.html" class="nav_link">
+              <i class="bx bx-add-to-queue nav_icon"></i>
+              <span class="nav_name">Resources</span>
+            </a>
+            <a href="./Manufacturing.html" class="nav_link">
+              <i class="bx bx-buildings nav_icon"></i>
+              <span class="nav_name">Manufacturing</span>
+            </a>
+            <a href="./machines.html" class="nav_link active">
+              <i class="bx bx-wrench nav_icon"></i>
+              <span class="nav_name">Machines</span>
+            </a>
+            <a href="#" class="nav_link">
+              <i class="bx bx-analyse nav_icon"></i>
+              <span class="nav_name">Planning</span>
+            </a>
+            <a href="#" class="nav_link">
+              <i class="bx bx-error nav_icon"></i>
+              <span class="nav_name">Issues</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Sign out -->
+        <div>
+          <a href="#" class="nav_link">
+            <i class="bx bx-cog nav_icon"></i>
+            <span class="nav_name">Settings</span>
+          </a>
+          <a href="../index.html" class="nav_link">
+            <i class="bx bx-log-out nav_icon"></i>
+            <span class="nav_name">SignOut</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+    <!-- End Nav bar -->
+
+    <div class="container-fluid" id="content">
+      <!-- START CONTENT -->
+      <div class="row g-3">
+        <!-- Title -->
+        <div class="col-4">
+          <h3 class="mb-5">Machines \ Information</h3>
+        </div>
+
+        <!-- Add New Button -->
+        <div class="col-5 d-flex justify-content-end align-items-baseline">
+          <button class="btn btn-primary px-5 py-2 box-shadow rounded-2">
+            <i class="bx bx-info-circle"></i> Vew Properties
+          </button>
+        </div>
+
+        <!-- Search Form -->
+        <div class="col-3 d-none d-md-block">
+          <div class="form search-form">
+            <i class="bx bx-search"></i>
+            <input
+              type="text"
+              class="form-control form-input search-form-input"
+              placeholder="Search by load name"
+            />
+            <span class="left-pan"><i class="fa fa-microphone"></i></span>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-9">
+          <div class="row gx-3 gy-5 row-cols-3">
+            <!-- Machine ID -->
+            <div class="col">
+              <div class="box-shadow rounded-2 bg-white p-3">
+                <!-- title -->
+                <i class="dot fs-5 bg-shamrock"></i> Machine ID
+                <hr />
+                <div class="d-flex justify-content-between">
+                  <span><img src="../assets/rocket.svg" /> Machine Name</span>
+                  <button class="btn btn-primary">OOE 78%</button>
+                </div>
+                <!-- Circles -->
+                <div class="d-flex justify-content-between">
+                  <!-- Circle -->
+                  <div class="text-center">
+                    <div class="circle-progress circle-2 blue my-3">
+                      <span class="progress-left progress-76">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right progress-76">
+                        <span class="progress-bar"></span>
+                      </span>
+                    </div>
+                    <div class="txt-gray">
+                      <h6>Availability</h6>
+                      <h6>76%</h6>
+                    </div>
+                  </div>
+                  <!-- Circle -->
+                  <div class="text-center">
+                    <div class="circle-progress circle-2 blue my-3">
+                      <span class="progress-left progress-68">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right progress-68">
+                        <span class="progress-bar"></span>
+                      </span>
+                    </div>
+                    <div class="txt-gray">
+                      <h6>Performance</h6>
+                      <h6>68%</h6>
+                    </div>
+                  </div>
+                  <!-- Circle -->
+                  <div class="text-center">
+                    <div class="circle-progress circle-2 blue my-3">
+                      <span class="progress-right progress-25">
+                        <span class="progress-bar"></span>
+                      </span>
+                    </div>
+                    <div class="txt-gray">
+                      <h6>Quality</h6>
+                      <h6>25%</h6>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <!-- Job order -->
+                <div class="d-flex justify-content-between fw-bold my-2">
+                  <span>Job Order</span>
+                  <span>123456789</span>
+                </div>
+                <!-- Route -->
+                <div class="d-flex justify-content-between fw-bold mb-4">
+                  <span>Route</span>
+                  <span>123456789</span>
+                </div>
+
+                <div>
+                  <!-- Consumption -->
+                  <div class="mb-3">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="txt-gray fs-small-2">Consumption</span>
+                      <span>Material Name</span>
+                    </div>
+                    <!-- Progress -->
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="mb-0 fs-5 fw-bold txt-gray">80%</p>
+                      <div class="progress-inline progress-80">
+                        <div class="value"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Production -->
+                  <div class="mb-3">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="txt-gray fs-small-2">Production</span>
+                      <span>Material Name</span>
+                    </div>
+                    <!-- Progress -->
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="mb-0 fs-5 fw-bold txt-gray">40%</p>
+                      <div class="progress-inline progress-40">
+                        <div class="value"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Energy Consumption -->
+                  <div class="mb-3">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="txt-gray fs-small-2"
+                        >Energy Consumption</span
+                      >
+                      <span>Material Name</span>
+                    </div>
+                    <!-- Progress -->
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="mb-0 fs-5 fw-bold txt-gray">70%</p>
+                      <div class="progress-inline progress-70">
+                        <div class="value"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Machine ID -->
+            <div class="col">
+              <div class="box-shadow rounded-2 bg-white p-3">
+                <!-- title -->
+                <i class="dot fs-5 bg-shamrock"></i> Machine ID
+                <hr />
+                <div class="d-flex justify-content-between">
+                  <span><img src="../assets/rocket.svg" /> Machine Name</span>
+                  <button class="btn btn-primary">OOE 78%</button>
+                </div>
+                <!-- Circles -->
+                <div class="d-flex justify-content-between">
+                  <!-- Circle -->
+                  <div class="text-center">
+                    <div class="circle-progress circle-2 blue my-3">
+                      <span class="progress-left progress-76">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right progress-76">
+                        <span class="progress-bar"></span>
+                      </span>
+                    </div>
+                    <div class="txt-gray">
+                      <h6>Availability</h6>
+                      <h6>76%</h6>
+                    </div>
+                  </div>
+                  <!-- Circle -->
+                  <div class="text-center">
+                    <div class="circle-progress circle-2 blue my-3">
+                      <span class="progress-left progress-68">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right progress-68">
+                        <span class="progress-bar"></span>
+                      </span>
+                    </div>
+                    <div class="txt-gray">
+                      <h6>Performance</h6>
+                      <h6>68%</h6>
+                    </div>
+                  </div>
+                  <!-- Circle -->
+                  <div class="text-center">
+                    <div class="circle-progress circle-2 blue my-3">
+                      <span class="progress-right progress-25">
+                        <span class="progress-bar"></span>
+                      </span>
+                    </div>
+                    <div class="txt-gray">
+                      <h6>Quality</h6>
+                      <h6>25%</h6>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <!-- Job order -->
+                <div class="d-flex justify-content-between fw-bold my-2">
+                  <span>Job Order</span>
+                  <span>123456789</span>
+                </div>
+                <!-- Route -->
+                <div class="d-flex justify-content-between fw-bold mb-4">
+                  <span>Route</span>
+                  <span>123456789</span>
+                </div>
+
+                <div>
+                  <!-- Consumption -->
+                  <div class="mb-3">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="txt-gray fs-small-2">Consumption</span>
+                      <span>Material Name</span>
+                    </div>
+                    <!-- Progress -->
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="mb-0 fs-5 fw-bold txt-gray">80%</p>
+                      <div class="progress-inline progress-80">
+                        <div class="value"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Production -->
+                  <div class="mb-3">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="txt-gray fs-small-2">Production</span>
+                      <span>Material Name</span>
+                    </div>
+                    <!-- Progress -->
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="mb-0 fs-5 fw-bold txt-gray">40%</p>
+                      <div class="progress-inline progress-40">
+                        <div class="value"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Energy Consumption -->
+                  <div class="mb-3">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="txt-gray fs-small-2"
+                        >Energy Consumption</span
+                      >
+                      <span>Material Name</span>
+                    </div>
+                    <!-- Progress -->
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="mb-0 fs-5 fw-bold txt-gray">70%</p>
+                      <div class="progress-inline progress-70">
+                        <div class="value"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Machine ID -->
+            <div class="col">
+              <div class="box-shadow rounded-2 bg-white p-3">
+                <!-- title -->
+                <i class="dot fs-5 bg-shamrock"></i> Machine ID
+                <hr />
+                <div class="d-flex justify-content-between">
+                  <span><img src="../assets/rocket.svg" /> Machine Name</span>
+                  <button class="btn btn-primary">OOE 78%</button>
+                </div>
+                <!-- Circles -->
+                <div class="d-flex justify-content-between">
+                  <!-- Circle -->
+                  <div class="text-center">
+                    <div class="circle-progress circle-2 blue my-3">
+                      <span class="progress-left progress-76">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right progress-76">
+                        <span class="progress-bar"></span>
+                      </span>
+                    </div>
+                    <div class="txt-gray">
+                      <h6>Availability</h6>
+                      <h6>76%</h6>
+                    </div>
+                  </div>
+                  <!-- Circle -->
+                  <div class="text-center">
+                    <div class="circle-progress circle-2 blue my-3">
+                      <span class="progress-left progress-68">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right progress-68">
+                        <span class="progress-bar"></span>
+                      </span>
+                    </div>
+                    <div class="txt-gray">
+                      <h6>Performance</h6>
+                      <h6>68%</h6>
+                    </div>
+                  </div>
+                  <!-- Circle -->
+                  <div class="text-center">
+                    <div class="circle-progress circle-2 blue my-3">
+                      <span class="progress-right progress-25">
+                        <span class="progress-bar"></span>
+                      </span>
+                    </div>
+                    <div class="txt-gray">
+                      <h6>Quality</h6>
+                      <h6>25%</h6>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <!-- Job order -->
+                <div class="d-flex justify-content-between fw-bold my-2">
+                  <span>Job Order</span>
+                  <span>123456789</span>
+                </div>
+                <!-- Route -->
+                <div class="d-flex justify-content-between fw-bold mb-4">
+                  <span>Route</span>
+                  <span>123456789</span>
+                </div>
+
+                <div>
+                  <!-- Consumption -->
+                  <div class="mb-3">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="txt-gray fs-small-2">Consumption</span>
+                      <span>Material Name</span>
+                    </div>
+                    <!-- Progress -->
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="mb-0 fs-5 fw-bold txt-gray">80%</p>
+                      <div class="progress-inline progress-80">
+                        <div class="value"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Production -->
+                  <div class="mb-3">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="txt-gray fs-small-2">Production</span>
+                      <span>Material Name</span>
+                    </div>
+                    <!-- Progress -->
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="mb-0 fs-5 fw-bold txt-gray">40%</p>
+                      <div class="progress-inline progress-40">
+                        <div class="value"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Energy Consumption -->
+                  <div class="mb-3">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="txt-gray fs-small-2"
+                        >Energy Consumption</span
+                      >
+                      <span>Material Name</span>
+                    </div>
+                    <!-- Progress -->
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="mb-0 fs-5 fw-bold txt-gray">70%</p>
+                      <div class="progress-inline progress-70">
+                        <div class="value"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Machine ID -->
+            <div class="col">
+              <div class="box-shadow rounded-2 bg-white p-3">
+                <!-- title -->
+                <i class="dot fs-5 bg-shamrock"></i> Machine ID
+                <hr />
+                <div class="d-flex justify-content-between">
+                  <span><img src="../assets/rocket.svg" /> Machine Name</span>
+                  <button class="btn btn-primary">OOE 78%</button>
+                </div>
+                <!-- Circles -->
+                <div class="d-flex justify-content-between">
+                  <!-- Circle -->
+                  <div class="text-center">
+                    <div class="circle-progress circle-2 blue my-3">
+                      <span class="progress-left progress-76">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right progress-76">
+                        <span class="progress-bar"></span>
+                      </span>
+                    </div>
+                    <div class="txt-gray">
+                      <h6>Availability</h6>
+                      <h6>76%</h6>
+                    </div>
+                  </div>
+                  <!-- Circle -->
+                  <div class="text-center">
+                    <div class="circle-progress circle-2 blue my-3">
+                      <span class="progress-left progress-68">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right progress-68">
+                        <span class="progress-bar"></span>
+                      </span>
+                    </div>
+                    <div class="txt-gray">
+                      <h6>Performance</h6>
+                      <h6>68%</h6>
+                    </div>
+                  </div>
+                  <!-- Circle -->
+                  <div class="text-center">
+                    <div class="circle-progress circle-2 blue my-3">
+                      <span class="progress-right progress-25">
+                        <span class="progress-bar"></span>
+                      </span>
+                    </div>
+                    <div class="txt-gray">
+                      <h6>Quality</h6>
+                      <h6>25%</h6>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <!-- Job order -->
+                <div class="d-flex justify-content-between fw-bold my-2">
+                  <span>Job Order</span>
+                  <span>123456789</span>
+                </div>
+                <!-- Route -->
+                <div class="d-flex justify-content-between fw-bold mb-4">
+                  <span>Route</span>
+                  <span>123456789</span>
+                </div>
+
+                <div>
+                  <!-- Consumption -->
+                  <div class="mb-3">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="txt-gray fs-small-2">Consumption</span>
+                      <span>Material Name</span>
+                    </div>
+                    <!-- Progress -->
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="mb-0 fs-5 fw-bold txt-gray">80%</p>
+                      <div class="progress-inline progress-80">
+                        <div class="value"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Production -->
+                  <div class="mb-3">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="txt-gray fs-small-2">Production</span>
+                      <span>Material Name</span>
+                    </div>
+                    <!-- Progress -->
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="mb-0 fs-5 fw-bold txt-gray">40%</p>
+                      <div class="progress-inline progress-40">
+                        <div class="value"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Energy Consumption -->
+                  <div class="mb-3">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="txt-gray fs-small-2"
+                        >Energy Consumption</span
+                      >
+                      <span>Material Name</span>
+                    </div>
+                    <!-- Progress -->
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="mb-0 fs-5 fw-bold txt-gray">70%</p>
+                      <div class="progress-inline progress-70">
+                        <div class="value"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Machine ID -->
+            <div class="col">
+              <div class="box-shadow rounded-2 bg-white p-3">
+                <!-- title -->
+                <i class="dot fs-5 bg-shamrock"></i> Machine ID
+                <hr />
+                <div class="d-flex justify-content-between">
+                  <span><img src="../assets/rocket.svg" /> Machine Name</span>
+                  <button class="btn btn-primary">OOE 78%</button>
+                </div>
+                <!-- Circles -->
+                <div class="d-flex justify-content-between">
+                  <!-- Circle -->
+                  <div class="text-center">
+                    <div class="circle-progress circle-2 blue my-3">
+                      <span class="progress-left progress-76">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right progress-76">
+                        <span class="progress-bar"></span>
+                      </span>
+                    </div>
+                    <div class="txt-gray">
+                      <h6>Availability</h6>
+                      <h6>76%</h6>
+                    </div>
+                  </div>
+                  <!-- Circle -->
+                  <div class="text-center">
+                    <div class="circle-progress circle-2 blue my-3">
+                      <span class="progress-left progress-68">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right progress-68">
+                        <span class="progress-bar"></span>
+                      </span>
+                    </div>
+                    <div class="txt-gray">
+                      <h6>Performance</h6>
+                      <h6>68%</h6>
+                    </div>
+                  </div>
+                  <!-- Circle -->
+                  <div class="text-center">
+                    <div class="circle-progress circle-2 blue my-3">
+                      <span class="progress-right progress-25">
+                        <span class="progress-bar"></span>
+                      </span>
+                    </div>
+                    <div class="txt-gray">
+                      <h6>Quality</h6>
+                      <h6>25%</h6>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <!-- Job order -->
+                <div class="d-flex justify-content-between fw-bold my-2">
+                  <span>Job Order</span>
+                  <span>123456789</span>
+                </div>
+                <!-- Route -->
+                <div class="d-flex justify-content-between fw-bold mb-4">
+                  <span>Route</span>
+                  <span>123456789</span>
+                </div>
+
+                <div>
+                  <!-- Consumption -->
+                  <div class="mb-3">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="txt-gray fs-small-2">Consumption</span>
+                      <span>Material Name</span>
+                    </div>
+                    <!-- Progress -->
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="mb-0 fs-5 fw-bold txt-gray">80%</p>
+                      <div class="progress-inline progress-80">
+                        <div class="value"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Production -->
+                  <div class="mb-3">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="txt-gray fs-small-2">Production</span>
+                      <span>Material Name</span>
+                    </div>
+                    <!-- Progress -->
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="mb-0 fs-5 fw-bold txt-gray">40%</p>
+                      <div class="progress-inline progress-40">
+                        <div class="value"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Energy Consumption -->
+                  <div class="mb-3">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="txt-gray fs-small-2"
+                        >Energy Consumption</span
+                      >
+                      <span>Material Name</span>
+                    </div>
+                    <!-- Progress -->
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="mb-0 fs-5 fw-bold txt-gray">70%</p>
+                      <div class="progress-inline progress-70">
+                        <div class="value"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Machine ID -->
+            <div class="col">
+              <div class="box-shadow rounded-2 bg-white p-3">
+                <!-- title -->
+                <i class="dot fs-5 bg-shamrock"></i> Machine ID
+                <hr />
+                <div class="d-flex justify-content-between">
+                  <span><img src="../assets/rocket.svg" /> Machine Name</span>
+                  <button class="btn btn-primary">OOE 78%</button>
+                </div>
+                <!-- Circles -->
+                <div class="d-flex justify-content-between">
+                  <!-- Circle -->
+                  <div class="text-center">
+                    <div class="circle-progress circle-2 blue my-3">
+                      <span class="progress-left progress-76">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right progress-76">
+                        <span class="progress-bar"></span>
+                      </span>
+                    </div>
+                    <div class="txt-gray">
+                      <h6>Availability</h6>
+                      <h6>76%</h6>
+                    </div>
+                  </div>
+                  <!-- Circle -->
+                  <div class="text-center">
+                    <div class="circle-progress circle-2 blue my-3">
+                      <span class="progress-left progress-68">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right progress-68">
+                        <span class="progress-bar"></span>
+                      </span>
+                    </div>
+                    <div class="txt-gray">
+                      <h6>Performance</h6>
+                      <h6>68%</h6>
+                    </div>
+                  </div>
+                  <!-- Circle -->
+                  <div class="text-center">
+                    <div class="circle-progress circle-2 blue my-3">
+                      <span class="progress-right progress-25">
+                        <span class="progress-bar"></span>
+                      </span>
+                    </div>
+                    <div class="txt-gray">
+                      <h6>Quality</h6>
+                      <h6>25%</h6>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <!-- Job order -->
+                <div class="d-flex justify-content-between fw-bold my-2">
+                  <span>Job Order</span>
+                  <span>123456789</span>
+                </div>
+                <!-- Route -->
+                <div class="d-flex justify-content-between fw-bold mb-4">
+                  <span>Route</span>
+                  <span>123456789</span>
+                </div>
+
+                <div>
+                  <!-- Consumption -->
+                  <div class="mb-3">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="txt-gray fs-small-2">Consumption</span>
+                      <span>Material Name</span>
+                    </div>
+                    <!-- Progress -->
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="mb-0 fs-5 fw-bold txt-gray">80%</p>
+                      <div class="progress-inline progress-80">
+                        <div class="value"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Production -->
+                  <div class="mb-3">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="txt-gray fs-small-2">Production</span>
+                      <span>Material Name</span>
+                    </div>
+                    <!-- Progress -->
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="mb-0 fs-5 fw-bold txt-gray">40%</p>
+                      <div class="progress-inline progress-40">
+                        <div class="value"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Energy Consumption -->
+                  <div class="mb-3">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="txt-gray fs-small-2"
+                        >Energy Consumption</span
+                      >
+                      <span>Material Name</span>
+                    </div>
+                    <!-- Progress -->
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="mb-0 fs-5 fw-bold txt-gray">70%</p>
+                      <div class="progress-inline progress-70">
+                        <div class="value"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alerts | Top 5 -->
+        <div class="col-12 col-md-3">
+          <div class="row m-0">
+            <!-- Start Alerts -->
+            <div class="col-6 col-md-12 mb-3 box-shadow rounded-2 bg-white p-3">
+              <h6 class="txt-alert">
+                <div class="dot bg-alert"></div>
+                ALERTS
+              </h6>
+              <hr />
+              <!-- alert -->
+              <div class="d-flex align-items-center fm-montserrat fw-medium">
+                <div class="col-3 text-center">
+                  <img src="../assets/resources.png" class="mr-3" />
+                </div>
+                <div class="col-9">
+                  <p class="mb-0">Confirm mass on machine</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="mb-0">id</p>
+                    <p class="mb-0 fw-bold">4017702</p>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <!-- alert -->
+              <div class="d-flex align-items-center fm-montserrat fw-medium">
+                <div class="col-3 text-center">
+                  <img src="../assets/resources.png" class="mr-3" />
+                </div>
+                <div class="col-9">
+                  <p class="mb-0">Machine stoppage</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="mb-0">id</p>
+                    <p class="mb-0 fw-bold">4017702</p>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <!-- alert -->
+              <div class="d-flex align-items-center fm-montserrat fw-medium">
+                <div class="col-3 text-center">
+                  <img src="../assets/load.png" class="mr-3" />
+                </div>
+                <div class="col-9">
+                  <p class="mb-0">Machine stopage</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="mb-0">id</p>
+                    <p class="mb-0 fw-bold">4017702</p>
+                  </div>
+                </div>
+              </div>
+              <hr />
+            </div>
+            <!-- End Alerts -->
+
+            <!-- Start Top 5 / Leasts -->
+            <div class="col-6 col-md-12 mb-4 box-shadow rounded-2 bg-white p-3">
+              <h6 class="d-flex align-items-center txt-dark">
+                <img src="../assets/function.png" class="mr-2" /> Job Orderp
+                Processes
+              </h6>
+
+              <hr />
+
+              <div class="row">
+                <table class="table table-sm table-borderless text-start">
+                  <thead>
+                    <tr class="txt-dark">
+                      <th scope="col"></th>
+                      <th scope="col">Planned</th>
+                      <th scope="col">Actual</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Group 1 -->
+                    <tr>
+                      <td class="fw-bolder txt-dark">
+                        <i class="dot bg-alert fs-5"></i> Function Name
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr class="fs-small-2">
+                      <td class="d-flex fw-bold">
+                        <img class="mr-2" src="../assets/material.png" />
+                        Material Name
+                      </td>
+                      <td>50 KG</td>
+                      <td class="fw-bold">52 KG</td>
+                    </tr>
+                    <tr class="fs-small-2">
+                      <td class="d-flex fw-bold">
+                        <img class="mr-2" src="../assets/product.png" /> Product
+                        Name
+                      </td>
+                      <td>30 KG</td>
+                      <td class="fw-bold">32 KG</td>
+                    </tr>
+                    <tr class="fs-small-2">
+                      <td class="d-flex fw-bold">
+                        <img class="mr-2" src="../assets/activity.png" /> Scrap
+                        Name
+                      </td>
+                      <td>3 KG</td>
+                      <td class="fw-bold">2 KG</td>
+                    </tr>
+
+                    <!-- Group 2 -->
+                    <tr>
+                      <td class="fw-bolder txt-dark">
+                        <i class="dot bg-shamrock fs-5"></i> Function Name
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr class="fs-small-2">
+                      <td class="d-flex fw-bold">
+                        <img class="mr-2" src="../assets/material.png" />
+                        Material Name
+                      </td>
+                      <td>50 KG</td>
+                      <td class="fw-bold">52 KG</td>
+                    </tr>
+                    <tr class="fs-small-2">
+                      <td class="d-flex fw-bold">
+                        <img class="mr-2" src="../assets/product.png" /> Product
+                        Name
+                      </td>
+                      <td>30 KG</td>
+                      <td class="fw-bold">32 KG</td>
+                    </tr>
+                    <tr class="fs-small-2">
+                      <td class="d-flex fw-bold">
+                        <img class="mr-2" src="../assets/activity.png" /> Scrap
+                        Name
+                      </td>
+                      <td>3 KG</td>
+                      <td class="fw-bold">2 KG</td>
+                    </tr>
+                    <!-- End Group -->
+
+                    <!-- Group 3 -->
+                    <tr>
+                      <td class="fw-bolder txt-dark">
+                        <i class="dot bg-shamrock fs-5"></i> Function Name
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr class="fs-small-2">
+                      <td class="d-flex fw-bold">
+                        <img class="mr-2" src="../assets/material.png" />
+                        Material Name
+                      </td>
+                      <td>50 KG</td>
+                      <td class="fw-bold">52 KG</td>
+                    </tr>
+                    <tr class="fs-small-2">
+                      <td class="d-flex fw-bold">
+                        <img class="mr-2" src="../assets/product.png" /> Product
+                        Name
+                      </td>
+                      <td>30 KG</td>
+                      <td class="fw-bold">32 KG</td>
+                    </tr>
+                    <tr class="fs-small-2">
+                      <td class="d-flex fw-bold">
+                        <img class="mr-2" src="../assets/activity.png" /> Scrap
+                        Name
+                      </td>
+                      <td>3 KG</td>
+                      <td class="fw-bold">2 KG</td>
+                    </tr>
+                    <!-- End Group -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- End Top 5 / Leasts -->
+          </div>
+        </div>
+      </div>
+      <!-- END CONTENT -->
+    </div>
+
+    <script src="../js/vendors/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

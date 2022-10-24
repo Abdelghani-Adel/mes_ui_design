@@ -1414,6 +1414,72 @@ hr {
     width: 75%;
   }
 }
+.progress-inline.progress-80 .value {
+  -webkit-animation: progress-80 3s linear forwards;
+          animation: progress-80 3s linear forwards;
+}
+
+@-webkit-keyframes progress-80 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes progress-80 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+.progress-inline.progress-40 .value {
+  -webkit-animation: progress-40 3s linear forwards;
+          animation: progress-40 3s linear forwards;
+}
+
+@-webkit-keyframes progress-40 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+
+@keyframes progress-40 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+.progress-inline.progress-70 .value {
+  -webkit-animation: progress-70 3s linear forwards;
+          animation: progress-70 3s linear forwards;
+}
+
+@-webkit-keyframes progress-70 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes progress-70 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
 .progress-bar-vertical {
   width: 10px;
   display: flex;

@@ -188,6 +188,40 @@ $transition: 2s;
   }
 }
 
+.progress-inline.progress-80 .value {
+  animation: progress-80 3s linear forwards;
+}
+@keyframes progress-80 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+.progress-inline.progress-40 .value {
+  animation: progress-40 3s linear forwards;
+}
+@keyframes progress-40 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+.progress-inline.progress-70 .value {
+  animation: progress-70 3s linear forwards;
+}
+@keyframes progress-70 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
 .progress-bar-vertical {
   width: 10px;
   // margin-top: auto;
