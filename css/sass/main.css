@@ -1474,7 +1474,7 @@ hr {
 
 .color {
   width: 20px;
-  height: 20px;
+  height: 100%;
 }
 
 .bg-1 {
@@ -1498,22 +1498,30 @@ hr {
 }
 
 .bg-6 {
-  background-color: #09618a;
+  background-color: #0b577a;
 }
 
 .bg-7 {
-  background-color: #1b88bb;
+  background-color: #0b73a3;
 }
 
 .bg-8 {
-  background-color: #20aef0;
+  background-color: #1e9fdb;
+}
+
+.bg-9 {
+  background-color: #15a1e2;
+}
+
+.bg-10 {
+  background-color: #13b4ff;
 }
 
 .small-id {
   display: flex;
   justify-content: space-between;
   color: #707070;
-  font-size: 0.7rem;
+  font-size: 0.5rem;
 }
 
 .small-id > * {

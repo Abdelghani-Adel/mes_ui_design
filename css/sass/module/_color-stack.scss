@@ -6,7 +6,7 @@
 }
 .color {
   width: 20px;
-  height: 20px;
+  height: 100%;
 }
 
 $colors: (
@@ -15,9 +15,11 @@ $colors: (
   "3": #5c121a,
   "4": #58050d,
   "5": #003f5c,
-  "6": #09618a,
-  "7": #1b88bb,
-  "8": #20aef0,
+  "6": #0b577a,
+  "7": #0b73a3,
+  "8": #1e9fdb,
+  "9": #15a1e2,
+  "10": #13b4ff,
 );
 
 @each $color, $value in $colors {
@@ -30,7 +32,7 @@ $colors: (
   display: flex;
   justify-content: space-between;
   color: #707070;
-  font-size: 0.7rem;
+  font-size: 0.5rem;
 }
 .small-id > * {
   margin: 0;
