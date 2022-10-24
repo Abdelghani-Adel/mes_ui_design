@@ -1082,7 +1082,9 @@ hr {
 }
 
 .navbar-shown {
-  width: 25vw;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   left: 0;
 }
 
