@@ -268,6 +268,10 @@ hr {
   color: #2d62ed;
 }
 
+.txt-cornflower-Blue {
+  color: #6195ed;
+}
+
 .border-primary {
   border-color: #2d62ed;
 }
@@ -386,6 +390,10 @@ hr {
 
 .border-royal-blue {
   border-color: #2d62ed;
+}
+
+.border-cornflower-Blue {
+  border-color: #6195ed;
 }
 
 .border-focus-primary:focus-visible {
@@ -508,6 +516,10 @@ hr {
   border-color: #2d62ed;
 }
 
+.border-focus-cornflower-Blue:focus-visible {
+  border-color: #6195ed;
+}
+
 .bg-primary {
   background-color: #2d62ed;
 }
@@ -626,6 +638,10 @@ hr {
 
 .bg-royal-blue {
   background-color: #2d62ed;
+}
+
+.bg-cornflower-Blue {
+  background-color: #6195ed;
 }
 
 .m-0 {
@@ -930,6 +946,27 @@ hr {
 
 .w-25vh {
   width: 25vh;
+}
+
+.plan-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: end;
+  position: absolute;
+  bottom: 0;
+}
+
+.plan-button {
+  background-color: #fff;
+  font-size: 1.2rem;
+  color: #bbc;
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  width: 80%;
 }
 
 .form-control {
@@ -1613,8 +1650,8 @@ hr {
 
 .inner-circle {
   position: relative;
-  width: 2rem;
-  height: 2rem;
+  width: 2.3rem;
+  height: 2.3rem;
   border-radius: 50%;
   background-color: #436f95;
 }

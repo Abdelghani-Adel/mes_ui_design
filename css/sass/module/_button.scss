@@ -1,0 +1,21 @@
+.plan-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: end;
+
+  position: absolute;
+  bottom: 0;
+}
+
+.plan-button {
+  background-color: #fff;
+  font-size: 1.2rem;
+  color: #bbc;
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  width: 80%;
+}
