@@ -123,12 +123,14 @@
       <!-- START CONTENT -->
       <div class="row g-3 mb-md-4">
         <!-- Title -->
-        <div class="col-6 col-md-7">
+        <div class="col-6 col-md-6">
           <h3 class="mb-5">Planning</h3>
         </div>
 
         <!-- Button Group -->
-        <div class="col-2 d-flex justify-content-end align-items-baseline">
+        <div
+          class="col-2 col-md-3 d-flex justify-content-end align-items-baseline"
+        >
           <div class="btn-group w-100 box-shadow bg-white rounded" role="group">
             <button class="btn btn-primary rounded">Set time</button>
             <button class="btn">Availability</button>
@@ -151,19 +153,19 @@
         <!-- Time Lines -->
         <div class="col-12 col-md-9">
           <!-- Start Horizontal Time-Line -->
-
-          <div class="row">
+          <div class="row mb-md-5">
             <div class="col-8 offset-md-2">
               <h6 class="text-center">Route</h6>
               <div class="d-flex align-items-center justify-content-between">
+                <!-- Circle -->
                 <div class="inner-circle"><p>1</p></div>
-
+                <!-- Separator -->
                 <div class="separator"></div>
-
+                <!-- Circle -->
                 <div class="inner-circle bg-primary"><p>2</p></div>
-
+                <!-- Separator -->
                 <div class="separator-2"></div>
-
+                <!-- Button -->
                 <button class="btn bg-white box-shadow txt-dark opertaion-btn">
                   + Add Operation
                 </button>
@@ -171,6 +173,76 @@
             </div>
           </div>
           <!-- End Horizontal Time-Line -->
+
+          <div class="row align-items-center px-5">
+            <div class="col-1">
+              <h4 class="vertical-text">Operation</h4>
+            </div>
+
+            <!-- Start Vertical Time-Line -->
+            <div class="col-3">
+              <!-- Vertical Time -->
+              <div class="d-flex flex-column">
+                <!-- Function -->
+                <div class="d-flex align-items-center">
+                  <div class="vertical-circle">
+                    <img src="../assets/function-white.svg" alt="" />
+                  </div>
+                  <div class="ms-3 fm-montserrat txt-astronaut-blue">
+                    <p class="m-0 fs-5 fw-bold">Function</p>
+                    <p class="m-0 fw-medium">Function Name</p>
+                  </div>
+                </div>
+                <!-- Separator -->
+                <div class="vertical-separator">
+                  <div></div>
+                </div>
+                <!-- Date | Time -->
+                <div class="d-flex align-items-center">
+                  <div class="vertical-circle">
+                    <img src="../assets/time-white.svg" alt="" />
+                  </div>
+                  <div class="ms-3 fm-montserrat txt-astronaut-blue">
+                    <p class="m-0 fs-5 fw-bold">Date | Time</p>
+                    <p class="m-0 fw-medium">25 Oct 2022</p>
+                    <p class="m-0 fw-medium">03:00 PM</p>
+                  </div>
+                </div>
+                <!-- Separator -->
+                <div class="vertical-separator">
+                  <div></div>
+                </div>
+                <!-- Machine -->
+                <div class="d-flex align-items-center">
+                  <div class="vertical-circle">
+                    <img src="../assets/machine-white.svg" alt="" />
+                  </div>
+                  <div class="ms-3 fm-montserrat txt-astronaut-blue">
+                    <p class="m-0 fs-5 fw-bold">Machine</p>
+                    <p class="m-0 fw-medium">Machine Name</p>
+                  </div>
+                </div>
+                <!-- Separator -->
+                <div class="vertical-separator">
+                  <div></div>
+                </div>
+                <!-- Resources -->
+                <div class="d-flex align-items-center">
+                  <div class="vertical-circle">
+                    <img src="../assets/resources-white.svg" alt="" />
+                  </div>
+                  <div class="ms-3 fm-montserrat txt-astronaut-blue">
+                    <p class="m-0 fs-5 fw-bold">Resources</p>
+                    <p class="m-0 fw-medium">Material Name 3KG</p>
+                    <p class="m-0 fw-medium">Material Name 4KG</p>
+                  </div>
+                </div>
+                <!--  -->
+              </div>
+              <!-- End Vertical -->
+            </div>
+            <!-- End Vertical Time-Line -->
+          </div>
         </div>
 
         <!-- Layers | Options -->

@@ -21,8 +21,14 @@
 
 .separator {
   height: 3px;
-  width: 10%;
+  width: 5%;
   background-color: #436f95;
+}
+
+@media screen and (min-width: 700px) {
+  .separator {
+    width: 10%;
+  }
 }
 
 .separator-2 {
@@ -32,4 +38,39 @@
 
 .opertaion-btn {
   border-radius: 2rem 0 0 2rem;
+}
+
+// Vertical Time-Line
+.vertical-circle {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: #003f5c;
+  position: relative;
+}
+.vertical-circle > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.vertical-separator {
+  height: 10vh;
+  width: 3.5rem;
+  position: relative;
+}
+.vertical-separator > div {
+  width: 3px;
+  height: 90%;
+  background-color: #003f5c;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.vertical-text {
+  transform: rotate(270deg);
+  color: #4c788d;
 }
