@@ -1,0 +1,35 @@
+.inner-circle {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+
+  border-radius: 50%;
+  background-color: #436f95;
+}
+
+.inner-circle > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.separator {
+  height: 3px;
+  width: 10%;
+  background-color: #436f95;
+}
+
+.separator-2 {
+  width: 50%;
+  border-top: 3px dashed #436f95;
+}
+
+.opertaion-btn {
+  border-radius: 2rem 0 0 2rem;
+}
