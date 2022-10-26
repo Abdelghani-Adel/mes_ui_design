@@ -1011,26 +1011,68 @@ hr {
   letter-spacing: 1px;
 }
 
+.login-section::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.2;
+  background-image: url("../../../assets/platform.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: black;
+}
+
+.login-section::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+
+@media screen and (min-width: 769px) {
+  .login-section::after {
+    display: none;
+  }
+  .login-section::before {
+    display: none;
+  }
+}
 .login-form {
   position: absolute;
   width: 60%;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 2;
 }
 
+@media screen and (min-width: 769px) {
+  .login-form {
+    top: 65%;
+  }
+}
 .logo {
   color: #2d62ed;
   display: flex;
-  width: 30%;
-  justify-content: space-between;
-  font-size: 2rem;
+  font-size: 3rem;
   position: absolute;
   top: 15%;
   left: 50%;
   transform: translateX(-50%);
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
+}
+
+.platform-wrapper {
+  position: relative;
+  height: auto;
 }
 
 .platform-background {

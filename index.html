@@ -25,11 +25,11 @@
     <title>MES Factory</title>
   </head>
   <body>
-    <div
-      class="d-flex flex-column flex-md-row justify-content-between h-100vh bg-primary"
-    >
+    <div class="d-flex justify-content-between h-100vh bg-primary">
       <!-- Platform Picture -->
-      <div class="col-12 col-md-7 col-xl-8 col-xxl-9 p-relative">
+      <div
+        class="col-12 col-md-7 col-xl-8 col-xxl-9 platform-wrapper d-none d-md-block"
+      >
         <div class="platform-background">
           <h2 class="fm-montserrat fw-bold mb-0">
             One Platform For Managing all
@@ -39,10 +39,12 @@
       </div>
 
       <!-- Login Section -->
-      <div class="col-12 col-md-5 col-xl-4 col-xxl-3 bg-white p-relative">
+      <div
+        class="col-12 col-md-5 col-xl-4 col-xxl-3 bg-white p-relative login-section"
+      >
         <!-- Logo -->
         <div class="logo">
-          <img src="assets/factoryIcon.svg" alt="" />
+          <img src="assets/factoryIcon.svg" class="mr-3" />
           <h3>MES</h3>
         </div>
 
@@ -61,10 +63,10 @@
           </div>
 
           <!-- Login button -->
-          <div class="form-control text-center">
+          <div class="form-control">
             <a
               href="pages/dashboard.html"
-              class="d-block form-btn fm-montserrat fw-bold"
+              class="d-flex justify-content-center form-btn fm-montserrat fw-bold"
             >
               Login
             </a>
