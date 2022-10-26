@@ -953,10 +953,15 @@ hr {
   flex-direction: column;
   width: 100%;
   justify-content: end;
-  position: absolute;
-  bottom: 0;
+  margin-top: 10px;
 }
 
+@media screen and (min-width: 700px) {
+  .plan-buttons {
+    position: absolute;
+    bottom: 0;
+  }
+}
 .plan-button {
   background-color: #fff;
   font-size: 1.2rem;
